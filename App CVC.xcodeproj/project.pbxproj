@@ -23,6 +23,7 @@
 		87021ABD1AD5F6240033D6CE /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABC1AD5F6240033D6CE /* PVCViewController.m */; };
 		87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */; };
 		87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */; };
+		87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E050E21AD71667008D0BAE /* buttonPlaceholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsEntrevistaTableViewController.m; sourceTree = "<group>"; };
 		87021AC11AD613640033D6CE /* TipsCurriculumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsCurriculumTableViewController.h; sourceTree = "<group>"; };
 		87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsCurriculumTableViewController.m; sourceTree = "<group>"; };
+		87E050E21AD71667008D0BAE /* buttonPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPlaceholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		87021A831AD5D9CB0033D6CE /* App CVC */ = {
 			isa = PBXGroup;
 			children = (
+				87E050E21AD71667008D0BAE /* buttonPlaceholder.png */,
 				87021AB61AD5E4880033D6CE /* botonAvisos.png */,
 				87021AB41AD5E4810033D6CE /* botonCurriculum.png */,
 				87021AB21AD5E47B0033D6CE /* botonPVC.png */,
@@ -241,6 +244,7 @@
 				87021AAB1AD5DA780033D6CE /* CVC-Logo.jpg in Resources */,
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,
+				87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */,
 				87021A921AD5D9CB0033D6CE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +460,7 @@
 				87021AA61AD5D9CB0033D6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87021AA71AD5D9CB0033D6CE /* Build configuration list for PBXNativeTarget "App CVCTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +469,7 @@
 				87021AA91AD5D9CB0033D6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

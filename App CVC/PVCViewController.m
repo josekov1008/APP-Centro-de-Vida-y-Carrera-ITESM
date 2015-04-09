@@ -19,6 +19,7 @@ NSInteger pageCount;
 NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
 NSInteger semestres = 9;
+NSInteger numeroSemestre = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -91,11 +92,11 @@ NSInteger semestres = 9;
     CGFloat pageWidth = self.scrollView.frame.size.width;
     NSInteger page = (NSInteger)floor((self.scrollView.contentOffset.x * 2.0f + pageWidth) / (pageWidth * 2.0f));
     
-    //CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
-    //NSInteger semestreActual = (NSInteger)floor((self.semestreScrollView.contentOffset.x * 2.0f + anchoSemestre) / (anchoSemestre * 2.0f));
+    CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
+    NSInteger semestreActual = (NSInteger)floor((self.semestreScrollView.contentOffset.x * 2.0f + anchoSemestre) / (anchoSemestre * 2.0f));
     
     self.pageControl.currentPage = page;
-    //self.labelSemestre.text = [NSString stringWithFormat:@"%ld", ((long)semestreActual + 1)];
+    self.labelSemestre.text = [NSString stringWithFormat:@"%ld", ((long)semestreActual + 1)];
     
     NSInteger firstPage = page - 1;
     NSInteger lastPage = page + 1;
@@ -182,13 +183,13 @@ NSInteger semestres = 9;
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0.0f;
         
-        self.labelSemestre.text = [NSString stringWithFormat:@"%ld", page];
+        //self.labelSemestre.text = [NSString stringWithFormat:@"%ld", (long)page];
         
         UIView *newView = [[UIView alloc] initWithFrame:frame];
         
         newView.backgroundColor = [UIColor greenColor];
         
-        NSString *title = @"Pagina de Semestre, aquí irá la información";
+        NSString *title = [NSString stringWithFormat:@"%ld", (long)page];
         
         UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(5, 5, 200, 20)];
         
