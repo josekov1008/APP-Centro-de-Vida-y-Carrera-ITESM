@@ -20,6 +20,8 @@ NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
 NSInteger semestres = 9;
 NSInteger numeroSemestre = 1;
+NSInteger paginasBotones = 3;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,10 +32,44 @@ NSInteger numeroSemestre = 1;
     self.scrollView.delegate = self;
     self.semestreScrollView.delegate = self;
     
-    //Temporal, para propositos de prueba solamente
-    buttons = [[NSArray alloc] initWithObjects:@"Primera Pagina", @"Segunda Pagina", @"Tercera Pagina", nil];
+    //Definicion de los botones - Cambiar los placeholders segun se requiera e identificarlo usando tags (del 1 al 11 para cada funcion)
+    UIButton *boton1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton1 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     
-    pageCount = buttons.count;
+    UIButton *boton2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton2 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton3 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton4 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton5 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton6 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton6 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton7 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton7 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton8 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton8 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton9 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton9 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton10 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton10 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    UIButton *boton11 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [boton11 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    
+    //Temporal, para propositos de prueba solamente
+    buttons = [[NSArray alloc] initWithObjects:boton1, boton2, boton3, boton4, boton5, boton6, boton7, boton8, boton9, boton10, boton11, nil];
+    
+    pageCount = paginasBotones;
     _pageControl.currentPage = 0;
     _pageControl.numberOfPages = pageCount;
     
@@ -61,7 +97,7 @@ NSInteger numeroSemestre = 1;
     CGSize pagesScrollViewSize = self.scrollView.frame.size;
     CGSize semestrePageScrollViewSize = self.semestreScrollView.frame.size;
     
-    self.scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * buttons.count, pagesScrollViewSize.height);
+    self.scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * paginasBotones, pagesScrollViewSize.height);
     self.semestreScrollView.contentSize = CGSizeMake(semestrePageScrollViewSize.width * semestres, semestrePageScrollViewSize.height);
     
     [self loadVisibleButtonPages];
@@ -109,7 +145,7 @@ NSInteger numeroSemestre = 1;
         [self loadButtonsPage:i];
     }
     
-    for (NSInteger i = lastPage + 1; i < buttons.count; i++) {
+    for (NSInteger i = lastPage + 1; i < paginasBotones; i++) {
         [self purgeButtonsPage:i];
     }
 }
@@ -130,7 +166,7 @@ NSInteger numeroSemestre = 1;
 
 - (void)purgeButtonsPage:(NSInteger)page {
     
-    if (page < 0 || page >= buttons.count) {
+    if (page < 0 || page >= paginasBotones) {
         return;
     }
     
@@ -143,7 +179,7 @@ NSInteger numeroSemestre = 1;
 }
 
 - (void)loadButtonsPage:(NSInteger)page {
-    if (page < 0 || page >= buttons.count) {
+    if (page < 0 || page >= paginasBotones) {
         return;
     }
     
@@ -156,15 +192,50 @@ NSInteger numeroSemestre = 1;
         
         UIView *newView = [[UIView alloc] initWithFrame:frame];
         
-        newView.backgroundColor = [UIColor grayColor];
+        newView.backgroundColor = [UIColor grayColor]; //Cambiar el color, un gris claro podría ser... se deja para después
         
-        NSString *title = [buttons objectAtIndex:page];
+        //TODO: encontrar una forma de determinar los indices de los botones de la pag actual
+        //Formula matemática?
         
-        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(5, 5, 200, 20)];
-        
-        label.text = title;
-        
-        [newView addSubview:label];
+        //botones de la primera pagina
+        if (page == 0) {
+            UIButton *button1 = [buttons objectAtIndex:0];
+            UIButton *button2 = [buttons objectAtIndex:1];
+            UIButton *button3 = [buttons objectAtIndex:2];
+            UIButton *button4 = [buttons objectAtIndex:3];
+            
+            button1.frame = CGRectMake(15,10, 50, 50);
+            button2.frame = CGRectMake(95,10, 50, 50);
+            button3.frame = CGRectMake(175,10, 50, 50);
+            button4.frame = CGRectMake(255,10, 50, 50);
+            
+            [newView addSubview:button1];
+            [newView addSubview:button2];
+            [newView addSubview:button3];
+            [newView addSubview:button4];
+            
+        }
+        //botones de la segunda pagina
+        else if (page == 1) {
+            UIButton *button1 = [buttons objectAtIndex:4];
+            UIButton *button2 = [buttons objectAtIndex:5];
+            UIButton *button3 = [buttons objectAtIndex:6];
+            UIButton *button4 = [buttons objectAtIndex:7];
+            
+            button1.frame = CGRectMake(15,10, 50, 50);
+            button2.frame = CGRectMake(95,10, 50, 50);
+            button3.frame = CGRectMake(175,10, 50, 50);
+            button4.frame = CGRectMake(255,10, 50, 50);
+            
+            [newView addSubview:button1];
+            [newView addSubview:button2];
+            [newView addSubview:button3];
+            [newView addSubview:button4];
+            
+        }
+        else if (page == 2) {
+            //TODO: agregar botones y cambiar sus posiciones, solo son 3 en esta view
+        }
         
         [_scrollView addSubview:newView];
         [pageViews replaceObjectAtIndex:page withObject:newView];
