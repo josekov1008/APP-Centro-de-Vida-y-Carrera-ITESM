@@ -235,6 +235,18 @@ NSInteger paginasBotones = 3;
         }
         else if (page == 2) {
             //TODO: agregar botones y cambiar sus posiciones, solo son 3 en esta view
+            UIButton *button1 = [buttons objectAtIndex:8];
+            UIButton *button2 = [buttons objectAtIndex:9];
+            UIButton *button3 = [buttons objectAtIndex:10];;
+            
+            button1.frame = CGRectMake(54,10, 50, 50);
+            button2.frame = CGRectMake(137,10, 50, 50);
+            button3.frame = CGRectMake(216,10, 50, 50);
+            
+            [newView addSubview:button1];
+            [newView addSubview:button2];
+            [newView addSubview:button3];
+            
         }
         
         [_scrollView addSubview:newView];
