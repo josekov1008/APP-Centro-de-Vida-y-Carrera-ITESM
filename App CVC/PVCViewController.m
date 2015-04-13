@@ -25,10 +25,16 @@ NSInteger semestres = 9;
 NSInteger numeroSemestre = 1;
 NSInteger paginasBotones = 3;
 
-
+NSMutableArray *actividadesSemestre; //Array de actividades, el index representa el semestre, cada objeto será un array de actividades
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Se cargan las actividades
+    NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"ListaActividades" ofType: @"plist"];
+    actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:pathPlist];
+    
+    semestres = actividadesSemestre.count;
     
     self.title = @"Plan de Vida y Carrera";
     // Do any additional setup after loading the view.
@@ -39,38 +45,60 @@ NSInteger paginasBotones = 3;
     //Definicion de los botones - Cambiar los placeholders segun se requiera e identificarlo usando tags (del 1 al 11 para cada funcion)
     UIButton *boton1 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton1 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton1.tag = 1;
+    [boton1 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton2 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton2.tag = 2;
+    [boton2 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton3 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton3 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton3.tag = 3;
+    [boton3 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton4 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton4 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton4.tag = 4;
+    [boton4 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton5 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton5 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton5.tag = 5;
+    [boton5 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton6 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton6 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton6.tag = 6;
+    [boton6 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton7 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton7 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton7.tag = 7;
+    [boton7 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton8 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton8 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton8.tag = 8;
+    [boton8 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton9 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton9 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton9.tag = 9;
+    [boton9 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton10 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton10 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton10.tag = 10;
+    [boton10 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *boton11 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton11 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    boton11.tag = 11;
+    [boton11 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
     
-    //Temporal, para propositos de prueba solamente
+    //Arreglo de los botones de la barra inferior
     buttons = [[NSArray alloc] initWithObjects:boton1, boton2, boton3, boton4, boton5, boton6, boton7, boton8, boton9, boton10, boton11, nil];
     
     pageCount = paginasBotones;
@@ -87,12 +115,6 @@ NSInteger paginasBotones = 3;
     for (NSInteger i = 0; i < semestres; i++) {
         [semesterPages addObject:[NSNull null]];
     }
-    
-    //Scroll View de los semestres
-    /*self.semestreScrollView.backgroundColor = [UIColor blackColor];
-    self.semestreScrollView.pagingEnabled = YES;
-
-    CGRect ViewSize = self.semestreScrollView.bounds;*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -281,7 +303,7 @@ NSInteger paginasBotones = 3;
         UIScrollView *newView = [[UIScrollView alloc] initWithFrame:frame];
         
         //Se agregan las actividades a cada semestre
-        [self agregarActividadesExistentes:newView];
+        [self agregarActividadesExistentes:newView pageNo:page];
         
         [_semestreScrollView addSubview:newView];
         [semesterPages replaceObjectAtIndex:page withObject:newView];
@@ -299,7 +321,7 @@ NSInteger paginasBotones = 3;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)agregarActividadesExistentes:(UIScrollView *) view {
+- (void)agregarActividadesExistentes:(UIScrollView *)view pageNo:(NSInteger)semester {
     //Se va a encargar de obtener las actividades guardadas y ponerlas en el scrollview de cada semestre
 
     //Propiedades de las actividades
@@ -309,7 +331,8 @@ NSInteger paginasBotones = 3;
     NSInteger alto = 50;
     
     //Para fines de prueba, deberá de cargar las activiades de una base de datos o plist
-    NSInteger cantActividades = 10;
+    NSArray *actividades = [actividadesSemestre objectAtIndex:semester];
+    NSInteger cantActividades = actividades.count;
     
     //Se determina el tamaño del ScrollView donde se desplegarán
     NSInteger pagActividades = ceil(cantActividades / 5.0);
@@ -337,6 +360,28 @@ NSInteger paginasBotones = 3;
 
         posY = posY + alto + 20;
     }
+}
+
+- (void)refreshPage:(NSInteger) page {
+    [self purgeSemesterPage:page];
+    [self loadVisibleSemesterPages];
+}
+
+- (IBAction)agregarActividadNueva:(id)sender {
+    //Semestre al cual guardar
+    NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
+    NSMutableArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
+    
+    //Identificar cada accion mediante el tag y agregar al array de arrays...
+    //Codigo de prueba
+    NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:@"Prueba", @"nombre", @"Esta es una prueba", @"descripcion", nil];
+    
+    [actividades addObject:nuevaActividad];
+    
+    [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
+    
+    //Se redibuja para apreciar el cambio (?)
+    [self refreshPage:semestreActual];
 }
 
 /*

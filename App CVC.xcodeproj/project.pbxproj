@@ -23,6 +23,7 @@
 		87021ABD1AD5F6240033D6CE /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABC1AD5F6240033D6CE /* PVCViewController.m */; };
 		87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */; };
 		87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */; };
+		8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8760BC711ADB5D6500572049 /* ListaActividades.plist */; };
 		87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E050E21AD71667008D0BAE /* buttonPlaceholder.png */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsEntrevistaTableViewController.m; sourceTree = "<group>"; };
 		87021AC11AD613640033D6CE /* TipsCurriculumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsCurriculumTableViewController.h; sourceTree = "<group>"; };
 		87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsCurriculumTableViewController.m; sourceTree = "<group>"; };
+		8760BC711ADB5D6500572049 /* ListaActividades.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaActividades.plist; sourceTree = "<group>"; };
 		87E050E21AD71667008D0BAE /* buttonPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPlaceholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */,
 				87021ABB1AD5F6240033D6CE /* PVCViewController.h */,
 				87021ABC1AD5F6240033D6CE /* PVCViewController.m */,
+				8760BC711ADB5D6500572049 /* ListaActividades.plist */,
 				87021AB81AD5E7320033D6CE /* AvisosTableViewController.h */,
 				87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */,
 				87021A911AD5D9CB0033D6CE /* Images.xcassets */,
@@ -239,6 +242,7 @@
 			files = (
 				87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */,
 				87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */,
+				8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */,
 				87021A901AD5D9CB0033D6CE /* Main.storyboard in Resources */,
 				87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */,
 				87021AAB1AD5DA780033D6CE /* CVC-Logo.jpg in Resources */,
