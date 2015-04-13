@@ -7,6 +7,7 @@
 //
 
 #import "PVCViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PVCViewController ()
 
@@ -15,12 +16,15 @@
 @implementation PVCViewController
 
 NSArray *buttons;
+
 NSInteger pageCount;
 NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
+
 NSInteger semestres = 9;
 NSInteger numeroSemestre = 1;
 NSInteger paginasBotones = 3;
+
 
 
 - (void)viewDidLoad {
@@ -98,7 +102,7 @@ NSInteger paginasBotones = 3;
     CGSize semestrePageScrollViewSize = self.semestreScrollView.frame.size;
     
     self.scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * paginasBotones, pagesScrollViewSize.height);
-    self.semestreScrollView.contentSize = CGSizeMake(semestrePageScrollViewSize.width * semestres, semestrePageScrollViewSize.height);
+    self.semestreScrollView.contentSize = CGSizeMake(semestrePageScrollViewSize.width * semestres, semestrePageScrollViewSize.height); //Linea para prueba
     
     [self loadVisibleButtonPages];
     [self loadVisibleSemesterPages];
@@ -262,23 +266,22 @@ NSInteger paginasBotones = 3;
     UIView *pageView = [semesterPages objectAtIndex:page];
     
     if ((NSNull*)pageView == [NSNull null]) {
-        CGRect frame = self.semestreScrollView.bounds;
+        //CGRect frame = self.semestreScrollView.bounds;
+        CGRect frame;
+        frame.size.width = self.semestreScrollView.bounds.size.width;
+        frame.size.height = self.semestreScrollView.bounds.size.height;
+        
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0.0f;
         
+        
+        
         //self.labelSemestre.text = [NSString stringWithFormat:@"%ld", (long)page];
         
-        UIView *newView = [[UIView alloc] initWithFrame:frame];
+        UIScrollView *newView = [[UIScrollView alloc] initWithFrame:frame];
         
-        newView.backgroundColor = [UIColor greenColor];
-        
-        NSString *title = [NSString stringWithFormat:@"%ld", (long)page];
-        
-        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(5, 5, 200, 20)];
-        
-        label.text = title;
-        
-        [newView addSubview:label];
+        //Se agregan las actividades a cada semestre
+        [self agregarActividadesExistentes:newView];
         
         [_semestreScrollView addSubview:newView];
         [semesterPages replaceObjectAtIndex:page withObject:newView];
@@ -294,6 +297,46 @@ NSInteger paginasBotones = 3;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)agregarActividadesExistentes:(UIScrollView *) view {
+    //Se va a encargar de obtener las actividades guardadas y ponerlas en el scrollview de cada semestre
+
+    //Propiedades de las actividades
+    NSInteger posX = 20;
+    NSInteger posY = 20;
+    NSInteger ancho = 280;
+    NSInteger alto = 50;
+    
+    //Para fines de prueba, deberá de cargar las activiades de una base de datos o plist
+    NSInteger cantActividades = 10;
+    
+    //Se determina el tamaño del ScrollView donde se desplegarán
+    NSInteger pagActividades = ceil(cantActividades / 5.0);
+    
+    view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * pagActividades);
+    
+    view.backgroundColor = [UIColor greenColor];
+
+    //Se crean views para cada actividad
+    for (NSInteger i = 0; i < cantActividades; i++) {
+        CGRect actividad;
+        actividad.size.width = ancho;
+        actividad.size.height = alto;
+    
+        actividad.origin.x = posX;
+        actividad.origin.y = posY;
+    
+        UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
+        viewActividad.backgroundColor = [UIColor whiteColor];
+    
+        viewActividad.layer.cornerRadius = 5;
+        viewActividad.layer.masksToBounds = YES;
+    
+        [view addSubview:viewActividad];
+
+        posY = posY + alto + 20;
+    }
 }
 
 /*
