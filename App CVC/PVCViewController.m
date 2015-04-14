@@ -42,6 +42,26 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     self.scrollView.delegate = self;
     self.semestreScrollView.delegate = self;
     
+    //Se inicializan los botones
+    [self inicializacionBotones];
+    
+    pageCount = paginasBotones;
+    _pageControl.currentPage = 0;
+    _pageControl.numberOfPages = pageCount;
+    
+    pageViews = [[NSMutableArray alloc] init];
+    semesterPages = [[NSMutableArray alloc] init];
+    
+    for (NSInteger i = 0; i < pageCount; i++) {
+        [pageViews addObject:[NSNull null]];
+    }
+    
+    for (NSInteger i = 0; i < semestres; i++) {
+        [semesterPages addObject:[NSNull null]];
+    }
+}
+
+- (void) inicializacionBotones {
     //Definicion de los botones - Cambiar los placeholders segun se requiera e identificarlo usando tags (del 1 al 11 para cada funcion)
     UIButton *boton1 = [UIButton buttonWithType:UIButtonTypeCustom];
     [boton1 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
@@ -100,21 +120,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     //Arreglo de los botones de la barra inferior
     buttons = [[NSArray alloc] initWithObjects:boton1, boton2, boton3, boton4, boton5, boton6, boton7, boton8, boton9, boton10, boton11, nil];
-    
-    pageCount = paginasBotones;
-    _pageControl.currentPage = 0;
-    _pageControl.numberOfPages = pageCount;
-    
-    pageViews = [[NSMutableArray alloc] init];
-    semesterPages = [[NSMutableArray alloc] init];
-    
-    for (NSInteger i = 0; i < pageCount; i++) {
-        [pageViews addObject:[NSNull null]];
-    }
-    
-    for (NSInteger i = 0; i < semestres; i++) {
-        [semesterPages addObject:[NSNull null]];
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
