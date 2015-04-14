@@ -21,7 +21,7 @@ NSInteger pageCount;
 NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
 
-NSInteger semestres = 9;
+NSInteger semestres;
 NSInteger numeroSemestre = 1;
 NSInteger paginasBotones = 3;
 
@@ -41,10 +41,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [self cargarArchivo];
     
     semestres = actividadesSemestre.count;
-    
-    if (semestres == 1) {
-        self.btnEliminar.enabled = NO;
-    }
     
     self.title = @"Plan de Vida y Carrera";
     // Do any additional setup after loading the view.
@@ -146,6 +142,14 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 }
 
 - (void)loadVisibleSemesterPages {
+    
+    if (semestres == 1) {
+        self.btnEliminar.enabled = NO;
+    }
+    else {
+        self.btnEliminar.enabled = YES;
+    }
+    
     CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
     NSInteger semestreActual = (NSInteger)floor((self.semestreScrollView.contentOffset.x * 2.0f + anchoSemestre) / (anchoSemestre * 2.0f));
     
@@ -332,8 +336,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     semestres++;
     
-    
-    
     //Se redibuja el la view
     CGSize tamanoActual = self.semestreScrollView.contentSize;
     tamanoActual.width += self.semestreScrollView.frame.size.width;
@@ -347,13 +349,33 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 
 - (IBAction)eliminarSemestre:(id)sender {
     //Se muestra confirmacion
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Eliminar?" message:@"¿Estas seguro que deseas borrar el semestre actual?" delegate:self cancelButtonTitle: @"Cancelar" otherButtonTitles:@"Eliminar", nil];
     
-    //Se elimina del arreglo
-    
-    //Se redibuja la view
+    alert.tag = 111;
+    [alert show];
 }
 
-- (IBAction)btnEliminar:(id)sender {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 111) {
+        if (buttonIndex == 1){
+            //Se elimina del arreglo
+            NSInteger semestreEliminar = [self.labelSemestre.text integerValue] - 1;
+            [self purgeSemesterPage:semestreEliminar];
+            
+            semestres--;
+            
+            [semesterPages removeObjectAtIndex:semestreEliminar];
+            [actividadesSemestre removeObjectAtIndex:semestreEliminar];
+            
+            //Se redibuja la view
+            CGSize tamanoActual = self.semestreScrollView.contentSize;
+            tamanoActual.width -= self.semestreScrollView.frame.size.width;
+            
+            self.semestreScrollView.contentSize = tamanoActual;
+            
+            [self loadVisibleSemesterPages];
+        }
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

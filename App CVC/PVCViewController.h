@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PVCViewController : UIViewController <UIScrollViewDelegate>
+@interface PVCViewController : UIViewController <UIScrollViewDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
