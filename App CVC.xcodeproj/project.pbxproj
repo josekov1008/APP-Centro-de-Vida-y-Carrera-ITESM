@@ -107,12 +107,7 @@
 		87021A831AD5D9CB0033D6CE /* App CVC */ = {
 			isa = PBXGroup;
 			children = (
-				87E050E21AD71667008D0BAE /* buttonPlaceholder.png */,
-				87021AB61AD5E4880033D6CE /* botonAvisos.png */,
-				87021AB41AD5E4810033D6CE /* botonCurriculum.png */,
-				87021AB21AD5E47B0033D6CE /* botonPVC.png */,
-				87021AB01AD5E4720033D6CE /* botonEntrevista.png */,
-				87021AAA1AD5DA780033D6CE /* CVC-Logo.jpg */,
+				87B53D081ADCB3FC0039FFB3 /* Resources */,
 				87021A881AD5D9CB0033D6CE /* AppDelegate.h */,
 				87021A891AD5D9CB0033D6CE /* AppDelegate.m */,
 				87021A8B1AD5D9CB0033D6CE /* ViewController.h */,
@@ -158,6 +153,19 @@
 				87021A9F1AD5D9CB0033D6CE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87B53D081ADCB3FC0039FFB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87E050E21AD71667008D0BAE /* buttonPlaceholder.png */,
+				87021AB61AD5E4880033D6CE /* botonAvisos.png */,
+				87021AB41AD5E4810033D6CE /* botonCurriculum.png */,
+				87021AB21AD5E47B0033D6CE /* botonPVC.png */,
+				87021AB01AD5E4720033D6CE /* botonEntrevista.png */,
+				87021AAA1AD5DA780033D6CE /* CVC-Logo.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -30,9 +30,15 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Se registra la notificación para la persistencia
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aplicacionBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
+    
     //Se cargan las actividades
-    NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"ListaActividades" ofType: @"plist"];
-    actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:pathPlist];
+    //NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"ListaActividades" ofType: @"plist"];
+    //actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:pathPlist];
+    //actividadesSemestre = [NSMutableArray alloc];
+    [self cargarArchivo];
     
     semestres = actividadesSemestre.count;
     
@@ -320,7 +326,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [self loadVisibleSemesterPages];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -387,6 +392,50 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     //Se redibuja para apreciar el cambio (?)
     [self refreshPage:semestreActual];
+}
+
+- (void)cargarArchivo {
+    
+    //Se crea el path al archivo
+    NSArray *paths = NSSearchPathForDirectoriesInDomains ( NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex: 0];
+    
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"datos.plist"];
+    
+    //Si existe, se carga
+    if ([[NSFileManager defaultManager] fileExistsAtPath:fileName])
+    {
+        //Se actualiza el array;
+        actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:fileName];
+    }
+    //Si no, se crea un array en blanco con 1 semestre
+    else {
+        NSMutableArray *semestreInicial = [[NSMutableArray alloc] init];
+        actividadesSemestre = [[NSMutableArray alloc] initWithObjects:semestreInicial, nil];
+    }
+}
+
+- (void) guardarArchivo {
+    //Se crea el path al archivo
+    NSArray *paths = NSSearchPathForDirectoriesInDomains ( NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex: 0];
+    
+    NSString *fileName = [documentsDirectory stringByAppendingPathComponent:@"datos.plist"];
+    
+    //Se guarda el archivo
+    [actividadesSemestre writeToFile:fileName atomically:YES];
+}
+
+- (void)aplicacionBackground:(NSNotification *)notification {
+    [self guardarArchivo];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (self.isMovingFromParentViewController) {
+        [self guardarArchivo];
+    }
 }
 
 /*
