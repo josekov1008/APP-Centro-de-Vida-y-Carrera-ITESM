@@ -20,4 +20,10 @@
 
 - (void) loadVisibleSemesterPages;
 - (void)loadSemesterPages:(NSInteger)page;
+
+- (IBAction)agregarSemestre:(id)sender;
+- (IBAction)eliminarSemestre:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnEliminar;
+
 @end

@@ -42,6 +42,10 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     semestres = actividadesSemestre.count;
     
+    if (semestres == 1) {
+        self.btnEliminar.enabled = NO;
+    }
+    
     self.title = @"Plan de Vida y Carrera";
     // Do any additional setup after loading the view.
     
@@ -319,6 +323,37 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         [_semestreScrollView addSubview:newView];
         [semesterPages replaceObjectAtIndex:page withObject:newView];
     }
+}
+
+- (IBAction)agregarSemestre:(id)sender {
+    //Se agrega un nuevo semestre al arreglo
+    NSMutableArray *semestreNuevo = [[NSMutableArray alloc] init];
+    [actividadesSemestre addObject:semestreNuevo];
+    
+    semestres++;
+    
+    
+    
+    //Se redibuja el la view
+    CGSize tamanoActual = self.semestreScrollView.contentSize;
+    tamanoActual.width += self.semestreScrollView.frame.size.width;
+    
+    self.semestreScrollView.contentSize = tamanoActual;
+    
+    [semesterPages addObject:[NSNull null]];
+    
+    [self loadVisibleSemesterPages];
+}
+
+- (IBAction)eliminarSemestre:(id)sender {
+    //Se muestra confirmacion
+    
+    //Se elimina del arreglo
+    
+    //Se redibuja la view
+}
+
+- (IBAction)btnEliminar:(id)sender {
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

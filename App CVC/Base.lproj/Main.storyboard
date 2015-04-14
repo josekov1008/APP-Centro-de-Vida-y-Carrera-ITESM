@@ -228,6 +228,22 @@ Plan de Vida y Carrera</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVm-ZI-pIz">
+                                <rect key="frame" x="282" y="70" width="22" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="agregarSemestre:" destination="1z4-lV-Cjk" eventType="touchUpInside" id="jOC-Xs-Msf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH4-6n-yEU">
+                                <rect key="frame" x="16" y="57" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="eliminarSemestre:" destination="1z4-lV-Cjk" eventType="touchUpInside" id="mPy-Vn-9cb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -236,6 +252,7 @@ Plan de Vida y Carrera</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="btnEliminar" destination="cH4-6n-yEU" id="hPm-Sg-u5D"/>
                         <outlet property="labelSemestre" destination="x1K-dr-52y" id="jFn-n3-Wrg"/>
                         <outlet property="pageControl" destination="r5c-5z-ve7" id="NtK-Wx-V0t"/>
                         <outlet property="scrollView" destination="hNH-4E-zCt" id="bOI-Re-Qo3"/>
