@@ -351,12 +351,21 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     //Se muestra confirmacion
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Eliminar?" message:@"¿Estas seguro que deseas borrar el semestre actual?" delegate:self cancelButtonTitle: @"Cancelar" otherButtonTitles:@"Eliminar", nil];
     
-    alert.tag = 111;
+    alert.tag = 999;
+    [alert show];
+}
+
+- (IBAction)eliminarActividad:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Eliminar?" message:@"¿Estas seguro que deseas borrar la actividad seleccionada?" delegate:self cancelButtonTitle: @"Cancelar" otherButtonTitles:@"Eliminar", nil];
+    
+    alert.tag = sender.tag;
     [alert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (alertView.tag == 111) {
+
+    //Identificador del alert para semestres
+    if (alertView.tag == 999) {
         if (buttonIndex == 1){
             //Se elimina del arreglo
             NSInteger semestreEliminar = [self.labelSemestre.text integerValue] - 1;
@@ -373,7 +382,24 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             
             self.semestreScrollView.contentSize = tamanoActual;
             
-            [self loadVisibleSemesterPages];
+            [self recargarPVC];
+        }
+    }
+    
+    //Identificador del alert para actividades tag = actividad a borrar
+    else {
+        if (buttonIndex == 1){
+            NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
+            NSInteger actividadActual = alertView.tag;
+            
+            //Se elimina del arreglo
+            NSMutableArray *actividadesSemestreActual = [actividadesSemestre objectAtIndex:semestreActual];
+            [actividadesSemestreActual removeObjectAtIndex:actividadActual];
+            
+            [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividadesSemestreActual];
+            
+            //Se redibuja la view
+            [self recargarPVC];
         }
     }
 }
@@ -406,7 +432,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * pagActividades);
     
-    view.backgroundColor = [UIColor greenColor];
+    view.backgroundColor = [UIColor greenColor]; //Para fines de visualización de prueba, cambiar acorde al diseño
 
     //Se crean views para cada actividad
     for (NSInteger i = 0; i < cantActividades; i++) {
@@ -419,7 +445,19 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
         UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
         viewActividad.backgroundColor = [UIColor whiteColor];
-    
+        
+        
+        //Se agrega a cada actividad su boton de eliminar
+        UIButton *botonEliminar = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [botonEliminar setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+        botonEliminar.tag = i;
+        [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
+
+        botonEliminar.frame = CGRectMake(3,3, 8, 8);
+        [viewActividad addSubview:botonEliminar];
+        
+        
         viewActividad.layer.cornerRadius = 5;
         viewActividad.layer.masksToBounds = YES;
     
@@ -431,6 +469,15 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 
 - (void)refreshPage:(NSInteger) page {
     [self purgeSemesterPage:page];
+    [self loadVisibleSemesterPages];
+}
+
+- (void) recargarPVC {
+    
+    for (NSInteger i = 0; i < semestres; i++) {
+        [self purgeSemesterPage:i];
+    }
+    
     [self loadVisibleSemesterPages];
 }
 
