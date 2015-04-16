@@ -426,11 +426,14 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     //Para fines de prueba, deberá de cargar las activiades de una base de datos o plist
     NSArray *actividades = [actividadesSemestre objectAtIndex:semester];
     NSInteger cantActividades = actividades.count;
+    NSInteger altoView = 0;
     
     //Se determina el tamaño del ScrollView donde se desplegarán
-    NSInteger pagActividades = ceil(cantActividades / 5.0);
-    
-    view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height * pagActividades);
+    //NSInteger pagActividades = ceil(cantActividades / 5.0);
+    if (cantActividades > 5) {
+        altoView = (cantActividades - 5) * 50; //90 pts el tamaño por actividad
+    }
+    view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height + altoView);
     
     view.backgroundColor = [UIColor greenColor]; //Para fines de visualización de prueba, cambiar acorde al diseño
 
