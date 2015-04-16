@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PVCViewController : UIViewController <UIScrollViewDelegate>
+@interface PVCViewController : UIViewController <UIScrollViewDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
@@ -20,4 +20,10 @@
 
 - (void) loadVisibleSemesterPages;
 - (void)loadSemesterPages:(NSInteger)page;
+
+- (IBAction)agregarSemestre:(id)sender;
+- (IBAction)eliminarSemestre:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnEliminar;
+
 @end
