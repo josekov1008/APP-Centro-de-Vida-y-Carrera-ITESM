@@ -143,7 +143,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 
 - (void)loadVisibleSemesterPages {
     
-    if (semestres == 1) {
+    if (semestres <= 9 || self.labelSemestre.text.integerValue < semestres) {
         self.btnEliminar.enabled = NO;
     }
     else {
@@ -178,6 +178,13 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     self.pageControl.currentPage = page;
     self.labelSemestre.text = [NSString stringWithFormat:@"%ld", ((long)semestreActual + 1)];
+    
+    if (semestreActual + 1 > 9) {
+        self.btnEliminar.enabled = YES;
+    }
+    else {
+        self.btnEliminar.enabled = NO;
+    }
     
     NSInteger firstPage = page - 1;
     NSInteger lastPage = page + 1;
@@ -358,14 +365,85 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (IBAction)eliminarActividad:(UIButton *)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Eliminar?" message:@"¿Estas seguro que deseas borrar la actividad seleccionada?" delegate:self cancelButtonTitle: @"Cancelar" otherButtonTitles:@"Eliminar", nil];
     
-    alert.tag = sender.tag;
+    alert.tag = sender.tag + 1000;
     [alert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
+    //Para poder utilizar los tags para identificar las actividades con las cuales trabajar
+    //se crean diferentes rangos de tags
+    //
+    //Tags 1 - 998: actividades a agregar
+    //Tag 999 reservedao para eliminar el semestre actual
+    //Tags > 1000 actividades a eliminar
+    
+    //Identificador del alert para las actividades a agregar
+    if (alertView.tag < 999) {
+        if (buttonIndex == 1) {
+            //Semestre al cual guardar
+            NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
+            NSMutableArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
+        
+            NSString *nombreActividad;
+            NSString *descripcionActividad;
+            NSString *prefijo = @"";
+        
+            //Se determina el titulo en base al tag (si, es codigo repetitivo)
+            switch (alertView.tag) {
+                case 1:
+                    nombreActividad = @"Programa 1-4-7";
+                    prefijo = @"Taller ";
+                    break;
+                case 2:
+                    nombreActividad = @"Modalidad";
+                    prefijo = @"Modalidad ";
+                    break;
+                case 3:
+                    nombreActividad = @"¿Concentración a Inscribir?";
+                    break;
+                case 4:
+                    nombreActividad = @"¿Actividades Deportivas?";
+                    break;
+                case 5:
+                    nombreActividad = @"¿Actividades Culturales?";
+                    break;
+                case 6:
+                    nombreActividad = @"¿Actividades Estudiantiles?";
+                    break;
+                case 7:
+                    nombreActividad = @"¿Idioma a Cursar?";
+                    break;
+                case 8:
+                    nombreActividad = @"¿Programa de Intercambio?";
+                    break;
+                case 9:
+                    nombreActividad = @"¿Servicio Social Ciudadano a Realizar?";
+                    break;
+                case 10:
+                    nombreActividad = @"¿Servicio Social Profesional a Realizar?";
+                    break;
+                case 11:
+                    nombreActividad = @"¿Requisitos de Graduación?";
+                    break;
+            }
+        
+            descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
+            
+            //Se crea el objeto con los detalles
+            NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", alertView.tag, @"tipoActividad", nil];
+        
+            [actividades addObject:nuevaActividad];
+        
+            [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
+        
+            //Se redibuja para apreciar el cambio (?)
+            [self refreshPage:semestreActual];
+        }
+    }
+    
     //Identificador del alert para semestres
-    if (alertView.tag == 999) {
+    else if (alertView.tag == 999) {
         if (buttonIndex == 1){
             //Se elimina del arreglo
             NSInteger semestreEliminar = [self.labelSemestre.text integerValue] - 1;
@@ -387,10 +465,11 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     }
     
     //Identificador del alert para actividades tag = actividad a borrar
+    //Hay que restarle 1000 al tag
     else {
         if (buttonIndex == 1){
             NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
-            NSInteger actividadActual = alertView.tag;
+            NSInteger actividadActual = alertView.tag - 1000;
             
             //Se elimina del arreglo
             NSMutableArray *actividadesSemestreActual = [actividadesSemestre objectAtIndex:semestreActual];
@@ -421,7 +500,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     NSInteger posX = 20;
     NSInteger posY = 20;
     NSInteger ancho = 280;
-    NSInteger alto = 50;
+    NSInteger alto = 60; //Por default estaba en 50, valores para experimentar
     
     //Para fines de prueba, deberá de cargar las activiades de una base de datos o plist
     NSArray *actividades = [actividadesSemestre objectAtIndex:semester];
@@ -430,8 +509,8 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     //Se determina el tamaño del ScrollView donde se desplegarán
     //NSInteger pagActividades = ceil(cantActividades / 5.0);
-    if (cantActividades > 5) {
-        altoView = (cantActividades - 5) * 50; //90 pts el tamaño por actividad
+    if (cantActividades > 4) {
+        altoView = (cantActividades - 4) * 80; //90 pts el tamaño por actividad
     }
     view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height + altoView);
     
@@ -449,6 +528,27 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
         viewActividad.backgroundColor = [UIColor whiteColor];
         
+        NSDictionary *datosActividad = [actividades objectAtIndex:i];
+        
+        //Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
+        //Imagen
+        UIImageView *thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 50, 50)];;
+        thumbnail.image = [UIImage imageNamed:@"buttonPlaceholder"];
+        
+        //Titulo
+        UILabel *tituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 5, 200, 18)];
+        tituloActividad.text = [datosActividad objectForKey:@"nombre"];//@"Titulo Actividad"; //Obtener este string del NSDictionary
+        tituloActividad.adjustsFontSizeToFitWidth = YES;
+        tituloActividad.textAlignment = NSTextAlignmentCenter;
+        
+        //Subtitulo
+        UILabel *subtituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 25, 200, 30)];
+        subtituloActividad.text = [datosActividad objectForKey:@"descripcion"];//@"Detalles de la actividad van a ir aquí, se pueden ocupar hasta 2 lineas"; //Obtener estos string del NSDictionary
+        subtituloActividad.textAlignment = NSTextAlignmentCenter;
+        subtituloActividad.adjustsFontSizeToFitWidth = YES;
+        subtituloActividad.font = [UIFont systemFontOfSize:12];
+        subtituloActividad.lineBreakMode = NSLineBreakByWordWrapping;
+        subtituloActividad.numberOfLines = 0;
         
         //Se agrega a cada actividad su boton de eliminar
         UIButton *botonEliminar = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -458,12 +558,18 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
 
         botonEliminar.frame = CGRectMake(3,3, 8, 8);
+        
+        //Se agregan los componentes a la view
         [viewActividad addSubview:botonEliminar];
+        [viewActividad addSubview:thumbnail];
+        [viewActividad addSubview:tituloActividad];
+        [viewActividad addSubview:subtituloActividad];
         
         
         viewActividad.layer.cornerRadius = 5;
         viewActividad.layer.masksToBounds = YES;
     
+        //Se agrega la actividad al view principal
         [view addSubview:viewActividad];
 
         posY = posY + alto + 20;
@@ -484,21 +590,67 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [self loadVisibleSemesterPages];
 }
 
-- (IBAction)agregarActividadNueva:(id)sender {
-    //Semestre al cual guardar
-    NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
-    NSMutableArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
+- (IBAction)agregarActividadNueva:(UIButton *)sender {
+    //Identificar cada accion mediante el tag y definir el titulo/mensaje a mostrar
+    NSInteger idActividad = sender.tag;
+    NSString *mensajeActividad;
+    NSString *tituloActividad;
     
-    //Identificar cada accion mediante el tag y agregar al array de arrays...
-    //Codigo de prueba
-    NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:@"Prueba", @"nombre", @"Esta es una prueba", @"descripcion", nil];
+    UIAlertView *alertaNuevaActividad = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Aceptar", nil];
+    alertaNuevaActividad.alertViewStyle = UIAlertViewStylePlainTextInput;
     
-    [actividades addObject:nuevaActividad];
+    switch (idActividad) {
+        case 1:
+            tituloActividad = @"¿Taller a Cursar?";
+            mensajeActividad = @"Número del taller (1-4-7) a cursar";
+            [alertaNuevaActividad textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
+            break;
+        case 2:
+            tituloActividad = @"¿Modalidad a Inscribir?";
+            mensajeActividad = @"Nombre de la modalidad a inscribir";
+            break;
+        case 3:
+            tituloActividad = @"¿Concentración a Inscribir?";
+            mensajeActividad = @"Nombre de la concentración a inscribir";
+            break;
+        case 4:
+            tituloActividad = @"¿Actividad Deportiva?";
+            mensajeActividad = @"Actividad deportiva a participar";
+            break;
+        case 5:
+            tituloActividad = @"¿Actividad Cultural?";
+            mensajeActividad = @"Actividad cultural a participar";
+            break;
+        case 6:
+            tituloActividad = @"¿Actividad Estudiantil?";
+            mensajeActividad = @"Actividad estudiantil a participar";
+            break;
+        case 7:
+            tituloActividad = @"¿Idioma a Cursar?";
+            mensajeActividad = @"Nombre del idioma a cursar";
+            break;
+        case 8:
+            tituloActividad = @"¿Programa de Intercambio?";
+            mensajeActividad = @"Nombre del programa de intercambio de interés";
+            break;
+        case 9:
+            tituloActividad = @"¿Servicio Social Ciudadano a Realizar?";
+            mensajeActividad = @"Nombre de actividad de servicio social ciudadano a realizar";
+            break;
+        case 10:
+            tituloActividad = @"¿Servicio Social Profesional a Realizar?";
+            mensajeActividad = @"Nombre de actividad de servicio profesional ciudadano a realizar";
+            break;
+        case 11:
+            tituloActividad = @"¿Requisitos de Graduación?";
+            mensajeActividad = @"Nombre del requisito de graduación a cumplir";
+            break;
+    }
     
-    [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
-    
-    //Se redibuja para apreciar el cambio (?)
-    [self refreshPage:semestreActual];
+    alertaNuevaActividad.tag = idActividad;
+    [alertaNuevaActividad setTitle:tituloActividad];
+    [alertaNuevaActividad setMessage:mensajeActividad];
+    [alertaNuevaActividad show];
 }
 
 - (void)cargarArchivo {
@@ -544,15 +696,5 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         [self guardarArchivo];
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
