@@ -400,38 +400,39 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
                     prefijo = @"Modalidad ";
                     break;
                 case 3:
-                    nombreActividad = @"¿Concentración a Inscribir?";
+                    nombreActividad = @"Concentración";
                     break;
                 case 4:
-                    nombreActividad = @"¿Actividades Deportivas?";
+                    nombreActividad = @"Actividad Deportiva";
                     break;
                 case 5:
-                    nombreActividad = @"¿Actividades Culturales?";
+                    nombreActividad = @"Actividad Cultural";
                     break;
                 case 6:
-                    nombreActividad = @"¿Actividades Estudiantiles?";
+                    nombreActividad = @"Actividad Estudiantil";
                     break;
                 case 7:
-                    nombreActividad = @"¿Idioma a Cursar?";
+                    nombreActividad = @"Idioma";
                     break;
                 case 8:
-                    nombreActividad = @"¿Programa de Intercambio?";
+                    nombreActividad = @"Programa de Intercambio";
                     break;
                 case 9:
-                    nombreActividad = @"¿Servicio Social Ciudadano a Realizar?";
+                    nombreActividad = @"Servicio Social Ciudadano";
                     break;
                 case 10:
-                    nombreActividad = @"¿Servicio Social Profesional a Realizar?";
+                    nombreActividad = @"Servicio Social Profesional";
                     break;
                 case 11:
-                    nombreActividad = @"¿Requisitos de Graduación?";
+                    nombreActividad = @"Requisito de Graduación";
                     break;
             }
         
             descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
+            NSString *tipo = [[NSString alloc] initWithFormat:@"%d", alertView.tag];
             
             //Se crea el objeto con los detalles
-            NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", alertView.tag, @"tipoActividad", nil];
+            NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", tipo, @"tipoActividad", nil];
         
             [actividades addObject:nuevaActividad];
         
@@ -532,21 +533,24 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         //Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
         //Imagen
+        NSString *nombreImagen = [datosActividad objectForKey:@"tipoActividad"];
+        nombreImagen = [nombreImagen stringByAppendingString:@".png"];
         UIImageView *thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 50, 50)];;
-        thumbnail.image = [UIImage imageNamed:@"buttonPlaceholder"];
+        thumbnail.image = [UIImage imageNamed:nombreImagen];
         
         //Titulo
-        UILabel *tituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 5, 200, 18)];
+        UILabel *tituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 3, 200, 18)];
+        tituloActividad.font = [UIFont boldSystemFontOfSize:18];
         tituloActividad.text = [datosActividad objectForKey:@"nombre"];//@"Titulo Actividad"; //Obtener este string del NSDictionary
         tituloActividad.adjustsFontSizeToFitWidth = YES;
         tituloActividad.textAlignment = NSTextAlignmentCenter;
         
         //Subtitulo
-        UILabel *subtituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 25, 200, 30)];
+        UILabel *subtituloActividad = [[UILabel alloc] initWithFrame:CGRectMake(75, 20, 200, 35)];
         subtituloActividad.text = [datosActividad objectForKey:@"descripcion"];//@"Detalles de la actividad van a ir aquí, se pueden ocupar hasta 2 lineas"; //Obtener estos string del NSDictionary
         subtituloActividad.textAlignment = NSTextAlignmentCenter;
         subtituloActividad.adjustsFontSizeToFitWidth = YES;
-        subtituloActividad.font = [UIFont systemFontOfSize:12];
+        subtituloActividad.font = [UIFont systemFontOfSize:14];
         subtituloActividad.lineBreakMode = NSLineBreakByWordWrapping;
         subtituloActividad.numberOfLines = 0;
         
@@ -667,10 +671,13 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         //Se actualiza el array;
         actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:fileName];
     }
-    //Si no, se crea un array en blanco con 1 semestre
+    //Si no, se crea un array en blanco con 9 semestres (default)
     else {
-        NSMutableArray *semestreInicial = [[NSMutableArray alloc] init];
-        actividadesSemestre = [[NSMutableArray alloc] initWithObjects:semestreInicial, nil];
+        actividadesSemestre = [[NSMutableArray alloc] init];
+        for (NSInteger z = 0; z < 9; z++) {
+            NSMutableArray *semestreInicial = [[NSMutableArray alloc] init];
+            [actividadesSemestre addObject:semestreInicial];
+        }
     }
 }
 
