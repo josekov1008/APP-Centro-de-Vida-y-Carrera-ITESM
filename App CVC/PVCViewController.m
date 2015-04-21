@@ -70,59 +70,92 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (void) inicializacionBotones {
     //Definicion de los botones - Cambiar los placeholders segun se requiera e identificarlo usando tags (del 1 al 11 para cada funcion)
     UIButton *boton1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton1 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton1 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton1.tag = 1;
     [boton1 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton1 setTitle:@"1-4-7" forState:UIControlStateNormal];
+    [boton1.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton1 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton2 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton2 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton2.tag = 2;
     [boton2 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton2 setTitle:@"Modalidad" forState:UIControlStateNormal];
+    [boton2.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton2 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton3 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton3 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton3.tag = 3;
     [boton3 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton3 setTitle:@"Conc." forState:UIControlStateNormal];
+    [boton3.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton3 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton4 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton4 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton4 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton4.tag = 4;
     [boton4 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton4 setTitle:@"Deportes" forState:UIControlStateNormal];
+    [boton4.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton4 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton5 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton5 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton5 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton5.tag = 5;
     [boton5 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton5 setTitle:@"Culturales" forState:UIControlStateNormal];
+    [boton5.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton5 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton6 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton6 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton6 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton6.tag = 6;
     [boton6 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton6 setTitle:@"Estudiantil" forState:UIControlStateNormal];
+    [boton6.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton6 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton7 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton7 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton7 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton7.tag = 7;
     [boton7 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton7 setTitle:@"Idiomas" forState:UIControlStateNormal];
+    [boton7.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton7 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton8 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton8 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton8 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton8.tag = 8;
     [boton8 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton8 setTitle:@"P.I." forState:UIControlStateNormal];
+    [boton8.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton8 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton9 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton9 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton9 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton9.tag = 9;
     [boton9 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton9 setTitle:@"SSC" forState:UIControlStateNormal];
+    [boton9.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton9 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton10 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton10 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton10 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton10.tag = 10;
     [boton10 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton10 setTitle:@"SSP" forState:UIControlStateNormal];
+    [boton10.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton10 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     UIButton *boton11 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [boton11 setImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
+    [boton11 setBackgroundImage:[UIImage imageNamed:@"buttonPlaceholder.png"] forState:UIControlStateNormal];
     boton11.tag = 11;
     [boton11 addTarget:self action:@selector(agregarActividadNueva:) forControlEvents:UIControlEventTouchUpInside];
+    [boton11 setTitle:@"Grad." forState:UIControlStateNormal];
+    [boton11.titleLabel setFont:[UIFont systemFontOfSize:10]];
+    [boton11 setTitleEdgeInsets:UIEdgeInsetsMake(65, 0, 0, 0)];
     
     //Arreglo de los botones de la barra inferior
     buttons = [[NSArray alloc] initWithObjects:boton1, boton2, boton3, boton4, boton5, boton6, boton7, boton8, boton9, boton10, boton11, nil];
