@@ -10,7 +10,7 @@
 
 @interface AvisoViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *lbTitulo;
+@property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) IBOutlet UITextView *lbDetalle;
 @property (strong, nonatomic) IBOutlet UILabel *lbFecha;
 @property (strong, nonatomic) IBOutlet UIImageView *imgFoto;

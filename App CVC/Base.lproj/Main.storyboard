@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldl-Vc-geO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldl-Vc-geO">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -137,7 +139,7 @@ Plan de Vida y Carrera</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s1N-bd-irb">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="s1N-bd-irb">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s1N-bd-irb" id="nce-71-nJo">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -171,37 +173,48 @@ Plan de Vida y Carrera</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5v-du-2Mh">
-                                <rect key="frame" x="85" y="85" width="151" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-Wa-ROU">
+                                <rect key="frame" x="16" y="157" width="288" height="379"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-RX-LwY">
+                                <rect key="frame" x="16" y="539" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QSA-BU-Qjm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyK-eF-61T">
-                                <rect key="frame" x="16" y="135" width="288" height="58"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyK-eF-61T">
+                                <rect key="frame" x="16" y="72" width="288" height="77"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="6gV-iD-l7U"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-Wa-ROU">
-                                <rect key="frame" x="16" y="209" width="288" height="294"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-RX-LwY">
-                                <rect key="frame" x="16" y="511" width="133" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X1x-M5-T4G" firstAttribute="top" secondItem="gOo-RX-LwY" secondAttribute="bottom" constant="8" symbolic="YES" id="9ly-s3-jxH"/>
+                            <constraint firstItem="n2p-Wa-ROU" firstAttribute="top" secondItem="oyK-eF-61T" secondAttribute="bottom" constant="8" symbolic="YES" id="CvA-20-867"/>
+                            <constraint firstItem="gOo-RX-LwY" firstAttribute="top" secondItem="n2p-Wa-ROU" secondAttribute="bottom" constant="3" id="FIV-E6-WHG"/>
+                            <constraint firstItem="oyK-eF-61T" firstAttribute="trailing" secondItem="PgI-yR-ZZk" secondAttribute="trailingMargin" id="LiE-Pk-ohM"/>
+                            <constraint firstItem="n2p-Wa-ROU" firstAttribute="leading" secondItem="gOo-RX-LwY" secondAttribute="leading" id="Wsr-pB-wda"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gOo-RX-LwY" secondAttribute="trailing" constant="95" id="ZAQ-89-ElT"/>
+                            <constraint firstItem="n2p-Wa-ROU" firstAttribute="leading" secondItem="oyK-eF-61T" secondAttribute="leading" id="djF-5t-qxR"/>
+                            <constraint firstItem="oyK-eF-61T" firstAttribute="top" secondItem="wZt-nX-MNe" secondAttribute="bottom" constant="8" symbolic="YES" id="m0B-3f-gDK"/>
+                            <constraint firstItem="oyK-eF-61T" firstAttribute="trailing" secondItem="n2p-Wa-ROU" secondAttribute="trailing" id="np9-g4-4X1"/>
+                            <constraint firstItem="gOo-RX-LwY" firstAttribute="leading" secondItem="PgI-yR-ZZk" secondAttribute="leadingMargin" id="yx5-Kj-aFG"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imgFoto" destination="n2p-Wa-ROU" id="TOa-LQ-eHf"/>
                         <outlet property="lbDetalle" destination="oyK-eF-61T" id="v8b-ns-mvx"/>
                         <outlet property="lbFecha" destination="gOo-RX-LwY" id="vAc-LY-cYL"/>
-                        <outlet property="lbTitulo" destination="h5v-du-2Mh" id="HKh-Zz-iRW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPn-i4-4JK" userLabel="First Responder" sceneMemberID="firstResponder"/>

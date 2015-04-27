@@ -3,16 +3,58 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>idEvento</key>
-		<integer>0</integer>
 		<key>aviso</key>
-		<string>Cvton</string>
-		<key>fecha</key>
-		<date>2015-04-10T14:14:42Z</date>
-		<key>urlFoto</key>
-		<string>https://scontent-dfw.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/11061193_947901291887886_6176869609683040959_n.jpg?oh=addc59ae249446e6525de54f83157303&amp;oe=55A1ABB8</string>
+		<string>MOL</string>
 		<key>detalles</key>
-		<string>Ven a partir del 16 y 17 de abril de 9am a 5pm a la Sala de Learning Commons en Biblioteca a que te asesoremos sobre el diseño de tu curriculum y como lo podrias mejorar.</string>
+		<string>Te compartimos la agenda del Maratón de Oportunidades Laborales (MOL) 
+recuerda que es este próximo 27, 28 y 29 de abril en el Centro Estudiantil</string>
+		<key>urlFoto</key>
+		<string>https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpt1/v/t1.0-9/11037343_953584061319609_2371226004967589315_n.jpg?oh=1d37e60eed88815e85557dffc9e65ffb&amp;oe=55A18FCE&amp;__gda__=1440966090_b542d5e1f4425bd0fec925c0695da5af</string>
+		<key>fecha</key>
+		<date>2015-04-24T14:36:00Z</date>
+	</dict>
+	<dict>
+		<key>aviso</key>
+		<string>Dia de la Tierra
+Dia de la TierraDia de la Tierra
+Dia de la Tierra</string>
+		<key>detalles</key>
+		<string>#DiadelaTierra</string>
+		<key>urlFoto</key>
+		<string>https://scontent-lax.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11078206_952552634756085_148670212081994213_n.jpg?oh=2e64741123e095948f1dca2c13cc4a2e&amp;oe=559C590F</string>
+		<key>fecha</key>
+		<date>2015-04-22T14:39:00Z</date>
+	</dict>
+	<dict>
+		<key>aviso</key>
+		<string>Reclutamiento Ternium en Monterrey</string>
+		<key>detalles</key>
+		<string>El Centro de Vida y Carrera te invita al reclutamiento de Ternium en Monterrey dirigido a las carreras de: IIS, IMA, IME, IQS, IQA, LCQ de 5to semestre en adelante y egresados con hasta 3 años de experiencia. En Aulas III-102 a las 10:30 am</string>
+		<key>urlFoto</key>
+		<string>https://scontent-lax.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/10923258_952235544787794_5278966415128982360_n.jpg?oh=c9b7570dedcb446d6b918b3c985173f2&amp;oe=55A0A9EC</string>
+		<key>fecha</key>
+		<date>2015-04-22T02:08:00Z</date>
+	</dict>
+	<dict>
+		<key>aviso</key>
+		<string>FUSE</string>
+		<key>detalles</key>
+		<string>Programa dinámico para recién egresados o por egresar de:
+Mecánica - Electrónica - Mecatrónica - Manufactura</string>
+		<key>urlFoto</key>
+		<string>https://scontent-lax.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/11150196_952226408122041_2894186745033611704_n.jpg?oh=f99ea69151b7533fcdae734f6e1606e5&amp;oe=55DEE894</string>
+		<key>fecha</key>
+		<date>2015-04-21T21:56:00Z</date>
+	</dict>
+	<dict>
+		<key>aviso</key>
+		<string>Entrevistas de Trabajo: Preguntas comunes</string>
+		<key>detalles</key>
+		<string>Preguntas más comunes en una en una entrevista de trabajo</string>
+		<key>urlFoto</key>
+		<string>https://scontent-lax.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11150182_952246541453361_8649837024700033474_n.jpg?oh=9aa39b5cab04c4844950cc4b3a462c42&amp;oe=55CCF917</string>
+		<key>fecha</key>
+		<date>2015-04-21T23:03:00Z</date>
 	</dict>
 </array>
 </plist>

@@ -14,24 +14,51 @@
 
 @implementation AvisoViewController
 
+#pragma mark - Managing the detail item
+
+
+
+- (void)setDetailItem:(id)newDetailItem {
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
+        
+        // Update the view.
+        [self configureView];
+        self.title = [self.detailItem objectForKey:@"aviso"];
+    }
+}
+
+- (void)configureView {
+    
+    NSDate *fechaHoy;
+    NSDateFormatter *formatoFecha;
+    
+    fechaHoy = [self.detailItem objectForKey:@"fecha"]; //obtengo la fecha de hoy.
+    formatoFecha = [[NSDateFormatter alloc] init];
+    
+    [formatoFecha setDateFormat:@"dd/MMM/YYYY '-' h:mm a"];
+    NSString *fechaMostrar = [formatoFecha stringFromDate: fechaHoy];
+    
+    // Update the user interface for the detail item.
+    if (self.detailItem) {
+        self.lbDetalle.text = [self.detailItem objectForKey:@"detalles"];
+        self.lbFecha.text = fechaMostrar;
+        NSString *stringUrl = [self.detailItem objectForKey:@"urlFoto"];
+        NSURL *nsurl = [NSURL URLWithString:stringUrl];
+        NSData *data = [[NSData alloc]initWithContentsOfURL:nsurl];
+        self.imgFoto.image = [UIImage imageWithData:data];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view, typically from a nib.
+    [self configureView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

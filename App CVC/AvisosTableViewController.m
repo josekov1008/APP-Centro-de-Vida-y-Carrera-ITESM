@@ -8,6 +8,7 @@
 
 #import "AvisosTableViewController.h"
 #import "ViewController.h"
+#import "AvisoViewController.h"
 
 @interface AvisosTableViewController ()
 
@@ -16,18 +17,23 @@
 
 @implementation AvisosTableViewController
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view, typically from a nib.
     NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"Avisos" ofType:@"plist"];
     self.avisos = [[NSArray alloc] initWithContentsOfFile:pathPlist];
+    self.title = @"Avisos";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
 }
+
 
 #pragma mark - Segues
 
@@ -56,6 +62,7 @@
     cell.textLabel.text = [object objectForKey:@"aviso"];
     return cell;
 }
+
 
 
 
