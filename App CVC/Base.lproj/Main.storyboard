@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldl-Vc-geO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="CVC-Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-3K-lPt">
+                                <rect key="frame" x="0.0" y="30" width="320" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="4As-oL-FbF"/>
+                                    <constraint firstAttribute="height" constant="88" id="ZRT-yP-MtV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4E-LV-qck">
+                                <rect key="frame" x="69" y="142" width="183" height="45"/>
+                                <string key="text">Elaboración de
+Plan de Vida y Carrera</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-JC-3BT">
+                                <rect key="frame" x="69" y="142" width="183" height="45"/>
+                                <string key="text">Elaboración de
+Plan de Vida y Carrera</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC7-ai-fSZ">
+                                <rect key="frame" x="31" y="413" width="258" height="36"/>
+                                <state key="normal" image="botonPVC.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1z4-lV-Cjk" kind="show" id="N29-BB-6Pq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-zk-d6W">
+                                <rect key="frame" x="31" y="352" width="258" height="36"/>
+                                <state key="normal" image="botonEntrevista.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bkR-cH-nxF" kind="show" id="4OL-XT-C8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-Ac-Y0l">
+                                <rect key="frame" x="31" y="291" width="258" height="36"/>
+                                <state key="normal" image="botonCurriculum.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e6X-a0-Ijm" kind="show" id="cCt-l2-RJ2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67F-NQ-7lE">
-                                <rect key="frame" x="31" y="235" width="258" height="39"/>
+                                <rect key="frame" x="31" y="227" width="258" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="IUJ-np-uEd"/>
                                     <constraint firstAttribute="width" constant="258" id="KNB-HB-oyE"/>
@@ -29,58 +80,11 @@
                                     <segue destination="sPi-dn-Y6x" kind="show" id="JpJ-1k-UNU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-Ac-Y0l">
-                                <rect key="frame" x="31" y="299" width="258" height="36"/>
-                                <state key="normal" image="botonCurriculum.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="e6X-a0-Ijm" kind="show" id="cCt-l2-RJ2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-zk-d6W">
-                                <rect key="frame" x="31" y="360" width="258" height="36"/>
-                                <state key="normal" image="botonEntrevista.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bkR-cH-nxF" kind="show" id="4OL-XT-C8V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC7-ai-fSZ">
-                                <rect key="frame" x="31" y="421" width="258" height="36"/>
-                                <state key="normal" image="botonPVC.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1z4-lV-Cjk" kind="show" id="N29-BB-6Pq"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-JC-3BT">
-                                <rect key="frame" x="69" y="142" width="183" height="45"/>
-                                <string key="text">Elaboración de
-Plan de Vida y Carrera</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4E-LV-qck">
-                                <rect key="frame" x="69" y="142" width="183" height="45"/>
-                                <string key="text">Elaboración de
-Plan de Vida y Carrera</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="CVC-Logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-3K-lPt">
-                                <rect key="frame" x="0.0" y="30" width="320" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="4As-oL-FbF"/>
-                                    <constraint firstAttribute="height" constant="88" id="ZRT-yP-MtV"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoTecBlanco.png" translatesAutoresizingMaskIntoConstraints="NO" id="b6K-yy-VZq">
+                                <rect key="frame" x="67" y="495" width="187" height="40"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pC7-ai-fSZ" secondAttribute="centerX" id="8KX-r4-bG5"/>
                             <constraint firstAttribute="centerX" secondItem="6IB-3K-lPt" secondAttribute="centerX" id="EYE-p9-i39"/>
@@ -90,7 +94,7 @@ Plan de Vida y Carrera</string>
                             <constraint firstAttribute="centerX" secondItem="vGS-zk-d6W" secondAttribute="centerX" id="UPj-Hz-LED"/>
                             <constraint firstItem="vGS-zk-d6W" firstAttribute="top" secondItem="ZSt-Ac-Y0l" secondAttribute="bottom" constant="25" id="Uo3-w0-1Ie"/>
                             <constraint firstItem="ZSt-Ac-Y0l" firstAttribute="top" secondItem="67F-NQ-7lE" secondAttribute="bottom" constant="25" id="ZOW-ff-v2U"/>
-                            <constraint firstItem="67F-NQ-7lE" firstAttribute="top" secondItem="r4E-LV-qck" secondAttribute="bottom" constant="48" id="grP-eh-Cr4"/>
+                            <constraint firstItem="67F-NQ-7lE" firstAttribute="top" secondItem="r4E-LV-qck" secondAttribute="bottom" constant="40" id="grP-eh-Cr4"/>
                             <constraint firstAttribute="centerX" secondItem="67F-NQ-7lE" secondAttribute="centerX" id="jk6-Tn-Ny2"/>
                         </constraints>
                     </view>
@@ -212,20 +216,21 @@ Plan de Vida y Carrera</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-4E-zCt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-4E-zCt">
                                 <rect key="frame" x="0.0" y="478" width="320" height="90"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="JIp-2e-1YD"/>
                                     <constraint firstAttribute="width" constant="320" id="Rcc-Qu-pxg"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1K-dr-52y">
-                                <rect key="frame" x="195" y="72" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1K-dr-52y">
+                                <rect key="frame" x="195" y="72" width="30" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH4-6n-yEU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH4-6n-yEU">
                                 <rect key="frame" x="16" y="57" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="-"/>
@@ -233,30 +238,58 @@ Plan de Vida y Carrera</string>
                                     <action selector="eliminarSemestre:" destination="1z4-lV-Cjk" eventType="touchUpInside" id="mPy-Vn-9cb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVm-ZI-pIz">
-                                <rect key="frame" x="282" y="70" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVm-ZI-pIz">
+                                <rect key="frame" x="273" y="57" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="agregarSemestre:" destination="1z4-lV-Cjk" eventType="touchUpInside" id="jOC-Xs-Msf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Semestre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-JB-a9m">
-                                <rect key="frame" x="114" y="72" width="73" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semestre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-JB-a9m">
+                                <rect key="frame" x="114" y="72" width="73" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-mB-PTX">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-mB-PTX">
                                 <rect key="frame" x="0.0" y="100" width="320" height="377"/>
                             </scrollView>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-5z-ve7">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-5z-ve7">
                                 <rect key="frame" x="140" y="539" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hNH-4E-zCt" secondAttribute="bottom" id="2X6-Ew-Qjt"/>
+                            <constraint firstItem="hNH-4E-zCt" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" id="2un-qD-Edw"/>
+                            <constraint firstItem="x1K-dr-52y" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" constant="195" id="3iy-jM-vjT"/>
+                            <constraint firstItem="hNH-4E-zCt" firstAttribute="top" secondItem="aPh-mB-PTX" secondAttribute="bottom" constant="1" id="6O8-As-K1D"/>
+                            <constraint firstItem="lVm-ZI-pIz" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="top" constant="57" id="BE2-ga-nnx"/>
+                            <constraint firstItem="ryU-JB-a9m" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" constant="114" id="BP6-BI-klb"/>
+                            <constraint firstItem="aPh-mB-PTX" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" id="Bnq-hl-08O"/>
+                            <constraint firstItem="ryU-JB-a9m" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="topMargin" constant="72" id="CUE-gY-stR"/>
+                            <constraint firstAttribute="trailing" secondItem="x1K-dr-52y" secondAttribute="trailing" constant="95" id="D6y-MX-nCx"/>
+                            <constraint firstItem="x1K-dr-52y" firstAttribute="leading" secondItem="ryU-JB-a9m" secondAttribute="trailing" constant="8" id="Ep1-Nw-8M9"/>
+                            <constraint firstAttribute="trailing" secondItem="lVm-ZI-pIz" secondAttribute="trailing" constant="17" id="FJX-Os-tJE"/>
+                            <constraint firstAttribute="trailing" secondItem="r5c-5z-ve7" secondAttribute="trailing" constant="141" id="L2B-7h-SVP"/>
+                            <constraint firstAttribute="trailing" secondItem="ryU-JB-a9m" secondAttribute="trailing" constant="133" id="ObC-TV-HFy"/>
+                            <constraint firstAttribute="trailing" secondItem="hNH-4E-zCt" secondAttribute="trailing" id="RBf-Vy-ahl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="r5c-5z-ve7" secondAttribute="bottom" constant="-8" id="bEP-8a-y7z"/>
+                            <constraint firstItem="x1K-dr-52y" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="top" constant="72" id="eIf-4y-w4N"/>
+                            <constraint firstItem="cH4-6n-yEU" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" constant="16" id="f5m-hL-tiY"/>
+                            <constraint firstItem="aPh-mB-PTX" firstAttribute="top" secondItem="ryU-JB-a9m" secondAttribute="bottom" constant="7.5" id="oRb-9G-ED4"/>
+                            <constraint firstItem="cH4-6n-yEU" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="topMargin" constant="57" id="tpU-ht-rJo"/>
+                            <constraint firstAttribute="trailing" secondItem="aPh-mB-PTX" secondAttribute="trailing" id="xh9-nx-ewV"/>
+                            <constraint firstItem="r5c-5z-ve7" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" constant="140" id="zjs-VZ-bNd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BP6-BI-klb"/>
+                                <exclude reference="ObC-TV-HFy"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnEliminar" destination="cH4-6n-yEU" id="hPm-Sg-u5D"/>
                         <outlet property="labelSemestre" destination="x1K-dr-52y" id="jFn-n3-Wrg"/>
@@ -271,10 +304,11 @@ Plan de Vida y Carrera</string>
         </scene>
     </scenes>
     <resources>
-        <image name="CVC-Logo.jpg" width="612" height="163"/>
+        <image name="CVC-Logo.png" width="612" height="163"/>
         <image name="botonAvisos.png" width="258" height="36"/>
         <image name="botonCurriculum.png" width="258" height="36"/>
         <image name="botonEntrevista.png" width="258" height="36"/>
         <image name="botonPVC.png" width="258" height="36"/>
+        <image name="logoTecBlanco.png" width="4084" height="1082"/>
     </resources>
 </document>

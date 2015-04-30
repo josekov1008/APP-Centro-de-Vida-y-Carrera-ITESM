@@ -14,7 +14,6 @@
 		87021A921AD5D9CB0033D6CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87021A911AD5D9CB0033D6CE /* Images.xcassets */; };
 		87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87021A931AD5D9CB0033D6CE /* LaunchScreen.xib */; };
 		87021AA11AD5D9CB0033D6CE /* App_CVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AA01AD5D9CB0033D6CE /* App_CVCTests.m */; };
-		87021AAB1AD5DA780033D6CE /* CVC-Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87021AAA1AD5DA780033D6CE /* CVC-Logo.jpg */; };
 		87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB01AD5E4720033D6CE /* botonEntrevista.png */; };
 		87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB21AD5E47B0033D6CE /* botonPVC.png */; };
 		87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB41AD5E4810033D6CE /* botonCurriculum.png */; };
@@ -23,6 +22,9 @@
 		87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */; };
 		87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */; };
 		87223A7B1ADDD4D700DAC2FF /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 87223A7A1ADDD4D700DAC2FF /* close.png */; };
+		873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E51AF2C890001B0F97 /* CVC-Logo.png */; };
+		873F56E81AF2CB8E001B0F97 /* menuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E71AF2CB8E001B0F97 /* menuBackground.png */; };
+		873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E91AF2D036001B0F97 /* logoTecBlanco.png */; };
 		8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8760BC711ADB5D6500572049 /* ListaActividades.plist */; };
 		87B53D091ADCC08C0039FFB3 /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABC1AD5F6240033D6CE /* PVCViewController.m */; };
 		87BA621C1AE60CB00083543B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA62111AE60CB00083543B /* 1.png */; };
@@ -63,7 +65,6 @@
 		87021A9A1AD5D9CB0033D6CE /* App CVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App CVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87021A9F1AD5D9CB0033D6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87021AA01AD5D9CB0033D6CE /* App_CVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App_CVCTests.m; sourceTree = "<group>"; };
-		87021AAA1AD5DA780033D6CE /* CVC-Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CVC-Logo.jpg"; sourceTree = "<group>"; };
 		87021AB01AD5E4720033D6CE /* botonEntrevista.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonEntrevista.png; sourceTree = "<group>"; };
 		87021AB21AD5E47B0033D6CE /* botonPVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonPVC.png; sourceTree = "<group>"; };
 		87021AB41AD5E4810033D6CE /* botonCurriculum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonCurriculum.png; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		87021AC11AD613640033D6CE /* TipsCurriculumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsCurriculumTableViewController.h; sourceTree = "<group>"; };
 		87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsCurriculumTableViewController.m; sourceTree = "<group>"; };
 		87223A7A1ADDD4D700DAC2FF /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		873F56E51AF2C890001B0F97 /* CVC-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CVC-Logo.png"; sourceTree = "<group>"; };
+		873F56E71AF2CB8E001B0F97 /* menuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBackground.png; sourceTree = "<group>"; };
+		873F56E91AF2D036001B0F97 /* logoTecBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTecBlanco.png; sourceTree = "<group>"; };
 		8760BC711ADB5D6500572049 /* ListaActividades.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaActividades.plist; sourceTree = "<group>"; };
 		87BA62111AE60CB00083543B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		87BA62121AE60CB00083543B /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		87021A831AD5D9CB0033D6CE /* App CVC */ = {
 			isa = PBXGroup;
 			children = (
+				873F56E41AF2C674001B0F97 /* imagenesBotones */,
 				87BA62101AE60CB00083543B /* Imagenes Actividades */,
 				87B53D081ADCB3FC0039FFB3 /* Resources */,
 				87021A881AD5D9CB0033D6CE /* AppDelegate.h */,
@@ -180,16 +185,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		873F56E41AF2C674001B0F97 /* imagenesBotones */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = imagenesBotones;
+			sourceTree = "<group>";
+		};
 		87B53D081ADCB3FC0039FFB3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				873F56E91AF2D036001B0F97 /* logoTecBlanco.png */,
+				873F56E71AF2CB8E001B0F97 /* menuBackground.png */,
 				87E050E21AD71667008D0BAE /* buttonPlaceholder.png */,
 				87223A7A1ADDD4D700DAC2FF /* close.png */,
 				87021AB61AD5E4880033D6CE /* botonAvisos.png */,
 				87021AB41AD5E4810033D6CE /* botonCurriculum.png */,
 				87021AB21AD5E47B0033D6CE /* botonPVC.png */,
 				87021AB01AD5E4720033D6CE /* botonEntrevista.png */,
-				87021AAA1AD5DA780033D6CE /* CVC-Logo.jpg */,
+				873F56E51AF2C890001B0F97 /* CVC-Logo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -301,11 +315,13 @@
 				87021A901AD5D9CB0033D6CE /* Main.storyboard in Resources */,
 				87BA62251AE60CB00083543B /* 8.png in Resources */,
 				87BA621E1AE60CB00083543B /* 11.png in Resources */,
+				873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */,
 				87BA62241AE60CB00083543B /* 7.png in Resources */,
+				873F56E81AF2CB8E001B0F97 /* menuBackground.png in Resources */,
 				87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */,
 				87223A7B1ADDD4D700DAC2FF /* close.png in Resources */,
 				87BA62261AE60CB00083543B /* 9.png in Resources */,
-				87021AAB1AD5DA780033D6CE /* CVC-Logo.jpg in Resources */,
+				873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */,
 				87BA62231AE60CB00083543B /* 6.png in Resources */,
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,

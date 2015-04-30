@@ -34,6 +34,9 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     UIApplication *app = [UIApplication sharedApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aplicacionBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
     
+    //Se cambia el color de fondo del view principal
+    self.view.backgroundColor = [UIColor colorWithRed:(27.0/255) green:(163.0/255) blue:(209.0/255) alpha:1];
+    
     //Se cargan las actividades
     //NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"ListaActividades" ofType: @"plist"];
     //actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:pathPlist];
@@ -462,7 +465,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             }
         
             descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
-            NSString *tipo = [[NSString alloc] initWithFormat:@"%d", alertView.tag];
+            NSString *tipo = [[NSString alloc] initWithFormat:@"%ld", (long)alertView.tag];
             
             //Se crea el objeto con los detalles
             NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", tipo, @"tipoActividad", nil];
