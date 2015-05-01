@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *semestreScrollView;
 @property (strong, nonatomic) IBOutlet UILabel *labelSemestre;
+@property (strong, nonatomic) IBOutlet UILabel *labelTitulo;
+
 - (void) loadVisibleButtonPages;
 - (void)loadButtonsPage:(NSInteger)page;
 
@@ -25,5 +27,6 @@
 - (IBAction)eliminarSemestre:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnEliminar;
+@property (strong, nonatomic) IBOutlet UIButton *btnAgregar;
 
 @end

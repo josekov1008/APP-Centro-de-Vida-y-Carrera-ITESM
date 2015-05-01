@@ -218,7 +218,7 @@ Plan de Vida y Carrera</string>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-4E-zCt">
                                 <rect key="frame" x="0.0" y="478" width="320" height="90"/>
-                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="JIp-2e-1YD"/>
                                     <constraint firstAttribute="width" constant="320" id="Rcc-Qu-pxg"/>
@@ -252,8 +252,12 @@ Plan de Vida y Carrera</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-mB-PTX">
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-mB-PTX">
                                 <rect key="frame" x="0.0" y="100" width="320" height="377"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="C12-w6-rS9" appends="YES" id="kIg-lV-1Li"/>
+                                </connections>
                             </scrollView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-5z-ve7">
                                 <rect key="frame" x="140" y="539" width="39" height="37"/>
@@ -291,14 +295,21 @@ Plan de Vida y Carrera</string>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnAgregar" destination="lVm-ZI-pIz" id="Q2r-JH-dic"/>
                         <outlet property="btnEliminar" destination="cH4-6n-yEU" id="hPm-Sg-u5D"/>
                         <outlet property="labelSemestre" destination="x1K-dr-52y" id="jFn-n3-Wrg"/>
+                        <outlet property="labelTitulo" destination="ryU-JB-a9m" id="3oN-Ac-Fiz"/>
                         <outlet property="pageControl" destination="r5c-5z-ve7" id="NtK-Wx-V0t"/>
                         <outlet property="scrollView" destination="hNH-4E-zCt" id="bOI-Re-Qo3"/>
                         <outlet property="semestreScrollView" destination="aPh-mB-PTX" id="Na9-U9-5ZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoJ-St-XHC" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="C12-w6-rS9">
+                    <connections>
+                        <action selector="handleLongPress:" destination="1z4-lV-Cjk" id="G1L-qZ-aKt"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1911" y="789"/>
         </scene>

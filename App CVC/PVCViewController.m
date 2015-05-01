@@ -16,6 +16,7 @@
 @implementation PVCViewController
 
 NSArray *buttons;
+NSMutableArray *botonesBorrar;
 
 NSInteger pageCount;
 NSMutableArray *pageViews;
@@ -30,6 +31,8 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    botonesBorrar = [[NSMutableArray alloc] init];
+    
     //Se registra la notificación para la persistencia
     UIApplication *app = [UIApplication sharedApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aplicacionBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
@@ -37,10 +40,13 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     //Se cambia el color de fondo del view principal
     self.view.backgroundColor = [UIColor colorWithRed:(27.0/255) green:(163.0/255) blue:(209.0/255) alpha:1];
     
+    //Se establecen colores y cosas así
+    [self.btnEliminar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnAgregar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.labelSemestre setTextColor:[UIColor whiteColor]];
+    [self.labelTitulo setTextColor:[UIColor whiteColor]];
+    
     //Se cargan las actividades
-    //NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"ListaActividades" ofType: @"plist"];
-    //actividadesSemestre = [[NSMutableArray alloc] initWithContentsOfFile:pathPlist];
-    //actividadesSemestre = [NSMutableArray alloc];
     [self cargarArchivo];
     
     semestres = actividadesSemestre.count;
@@ -378,6 +384,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [actividadesSemestre addObject:semestreNuevo];
     
     semestres++;
+    CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
     
     //Se redibuja el la view
     CGSize tamanoActual = self.semestreScrollView.contentSize;
@@ -388,6 +395,9 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [semesterPages addObject:[NSNull null]];
     
     [self loadVisibleSemesterPages];
+    
+    //Offset del contenido para el semestre (beta)
+    [self.semestreScrollView setContentOffset:CGPointMake(((semestres - 1) * anchoSemestre), 0) animated:YES];
 }
 
 - (IBAction)eliminarSemestre:(id)sender {
@@ -403,6 +413,16 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     alert.tag = sender.tag + 1000;
     [alert show];
+    
+    NSInteger cantBotonesBorrar = [botonesBorrar count];
+        
+    for (NSInteger i = 0; i < cantBotonesBorrar; i++) {
+        UIButton *actual = [botonesBorrar objectAtIndex:i];
+            
+        actual.hidden = YES;
+            
+        [botonesBorrar replaceObjectAtIndex:i withObject:actual];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -511,6 +531,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             //Se elimina del arreglo
             NSMutableArray *actividadesSemestreActual = [actividadesSemestre objectAtIndex:semestreActual];
             [actividadesSemestreActual removeObjectAtIndex:actividadActual];
+            [botonesBorrar removeLastObject];
             
             [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividadesSemestreActual];
             
@@ -563,7 +584,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         actividad.origin.y = posY;
     
         UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
-        viewActividad.backgroundColor = [UIColor whiteColor];
+        viewActividad.backgroundColor = [UIColor colorWithRed:(214.0/255) green:(214.0/255) blue:(214.0/255) alpha:1];
         
         NSDictionary *datosActividad = [actividades objectAtIndex:i];
         
@@ -595,9 +616,12 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         [botonEliminar setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
         botonEliminar.tag = i;
+        botonEliminar.hidden = YES;
         [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
 
         botonEliminar.frame = CGRectMake(3,3, 8, 8);
+        
+        [botonesBorrar addObject:botonEliminar];
         
         //Se agregan los componentes a la view
         [viewActividad addSubview:botonEliminar];
@@ -730,6 +754,18 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 
 - (void)aplicacionBackground:(NSNotification *)notification {
     [self guardarArchivo];
+}
+
+- (IBAction) handleLongPress: (UILongPressGestureRecognizer *) sender {
+    NSInteger cantBotonesBorrar = [botonesBorrar count];
+        
+    for (NSInteger i = 0; i < cantBotonesBorrar; i++) {
+        UIButton *actual = [botonesBorrar objectAtIndex:i];
+            
+        actual.hidden = NO;
+            
+        [botonesBorrar replaceObjectAtIndex:i withObject:actual];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

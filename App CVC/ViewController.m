@@ -22,7 +22,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.view.backgroundColor = [UIColor colorWithRed:(27.0/255) green:(163.0/255) blue:(209.0/255) alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:(109.0/255) green:(218.0/255) blue:(255.0/255) alpha:1];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
