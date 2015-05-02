@@ -18,6 +18,8 @@
 NSArray *buttons;
 NSMutableArray *botonesBorrar;
 
+bool editarActividadActivado;
+
 NSInteger pageCount;
 NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
@@ -31,7 +33,9 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Cosas relacionadas a la edicion de actividades
     botonesBorrar = [[NSMutableArray alloc] init];
+    editarActividadActivado = NO;
     
     //Se registra la notificación para la persistencia
     UIApplication *app = [UIApplication sharedApplication];
@@ -413,16 +417,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     alert.tag = sender.tag + 1000;
     [alert show];
-    
-    NSInteger cantBotonesBorrar = [botonesBorrar count];
-        
-    for (NSInteger i = 0; i < cantBotonesBorrar; i++) {
-        UIButton *actual = [botonesBorrar objectAtIndex:i];
-            
-        actual.hidden = YES;
-            
-        [botonesBorrar replaceObjectAtIndex:i withObject:actual];
-    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -441,61 +435,73 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
             NSMutableArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
         
-            NSString *nombreActividad;
-            NSString *descripcionActividad;
-            NSString *prefijo = @"";
-        
-            //Se determina el titulo en base al tag (si, es codigo repetitivo)
-            switch (alertView.tag) {
-                case 1:
-                    nombreActividad = @"Programa 1-4-7";
-                    prefijo = @"Taller ";
-                    break;
-                case 2:
-                    nombreActividad = @"Modalidad";
-                    prefijo = @"Modalidad ";
-                    break;
-                case 3:
-                    nombreActividad = @"Concentración";
-                    break;
-                case 4:
-                    nombreActividad = @"Actividad Deportiva";
-                    break;
-                case 5:
-                    nombreActividad = @"Actividad Cultural";
-                    break;
-                case 6:
-                    nombreActividad = @"Actividad Estudiantil";
-                    break;
-                case 7:
-                    nombreActividad = @"Idioma";
-                    break;
-                case 8:
-                    nombreActividad = @"Programa de Intercambio";
-                    break;
-                case 9:
-                    nombreActividad = @"Servicio Social Ciudadano";
-                    break;
-                case 10:
-                    nombreActividad = @"Servicio Social Profesional";
-                    break;
-                case 11:
-                    nombreActividad = @"Requisito de Graduación";
-                    break;
-            }
-        
-            descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
-            NSString *tipo = [[NSString alloc] initWithFormat:@"%ld", (long)alertView.tag];
+            //Tamanño del texto (para validar que se haya escrito algo
+            NSInteger tamanoTexto = [[alertView textFieldAtIndex:0].text length];
             
-            //Se crea el objeto con los detalles
-            NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", tipo, @"tipoActividad", nil];
+            if (tamanoTexto == 0) {
+                UIAlertView *alertaErrorActividad = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No se han ingresado los datos solicitados." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Aceptar", nil];
+                
+                [alertaErrorActividad show];
+            }
+            else {
+            
+                NSString *nombreActividad;
+                NSString *descripcionActividad;
+                NSString *prefijo = @"";
         
-            [actividades addObject:nuevaActividad];
+                //Se determina el titulo en base al tag (si, es codigo repetitivo)
+                switch (alertView.tag) {
+                    case 1:
+                        nombreActividad = @"Programa 1-4-7";
+                        prefijo = @"Taller ";
+                        break;
+                    case 2:
+                        nombreActividad = @"Modalidad";
+                        prefijo = @"Modalidad ";
+                        break;
+                    case 3:
+                        nombreActividad = @"Concentración";
+                        break;
+                    case 4:
+                        nombreActividad = @"Actividad Deportiva";
+                        break;
+                    case 5:
+                        nombreActividad = @"Actividad Cultural";
+                        break;
+                    case 6:
+                        nombreActividad = @"Actividad Estudiantil";
+                        break;
+                    case 7:
+                        nombreActividad = @"Idioma";
+                        break;
+                    case 8:
+                        nombreActividad = @"Programa de Intercambio";
+                        break;
+                    case 9:
+                        nombreActividad = @"Servicio Social Ciudadano";
+                        break;
+                    case 10:
+                        nombreActividad = @"Servicio Social Profesional";
+                        break;
+                    case 11:
+                        nombreActividad = @"Requisito de Graduación";
+                        break;
+                }
         
-            [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
+                descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
+            
+                NSString *tipo = [[NSString alloc] initWithFormat:@"%ld", (long)alertView.tag];
+            
+                //Se crea el objeto con los detalles
+                NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", tipo, @"tipoActividad", nil];
         
-            //Se redibuja para apreciar el cambio (?)
-            [self refreshPage:semestreActual];
+                [actividades addObject:nuevaActividad];
+        
+                [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
+        
+                //Se redibuja para apreciar el cambio (?)
+                [self refreshPage:semestreActual];
+            }
         }
     }
     
@@ -765,6 +771,24 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         actual.hidden = NO;
             
         [botonesBorrar replaceObjectAtIndex:i withObject:actual];
+    }
+    
+    editarActividadActivado = YES;
+}
+
+- (IBAction) handleSinglePress: (UITapGestureRecognizer *) sender {
+    if (editarActividadActivado) {
+        NSInteger cantBotonesBorrar = [botonesBorrar count];
+        
+        for (NSInteger i = 0; i < cantBotonesBorrar; i++) {
+            UIButton *actual = [botonesBorrar objectAtIndex:i];
+            
+            actual.hidden = YES;
+            
+            [botonesBorrar replaceObjectAtIndex:i withObject:actual];
+        }
+        
+        editarActividadActivado = NO;
     }
 }
 
