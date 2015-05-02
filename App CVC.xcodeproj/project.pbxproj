@@ -25,7 +25,6 @@
 		873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E51AF2C890001B0F97 /* CVC-Logo.png */; };
 		873F56E81AF2CB8E001B0F97 /* menuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E71AF2CB8E001B0F97 /* menuBackground.png */; };
 		873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E91AF2D036001B0F97 /* logoTecBlanco.png */; };
-		8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8760BC711ADB5D6500572049 /* ListaActividades.plist */; };
 		87B53D091ADCC08C0039FFB3 /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABC1AD5F6240033D6CE /* PVCViewController.m */; };
 		87BA621C1AE60CB00083543B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA62111AE60CB00083543B /* 1.png */; };
 		87BA621D1AE60CB00083543B /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA62121AE60CB00083543B /* 10.png */; };
@@ -81,7 +80,6 @@
 		873F56E51AF2C890001B0F97 /* CVC-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CVC-Logo.png"; sourceTree = "<group>"; };
 		873F56E71AF2CB8E001B0F97 /* menuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBackground.png; sourceTree = "<group>"; };
 		873F56E91AF2D036001B0F97 /* logoTecBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTecBlanco.png; sourceTree = "<group>"; };
-		8760BC711ADB5D6500572049 /* ListaActividades.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaActividades.plist; sourceTree = "<group>"; };
 		87BA62111AE60CB00083543B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		87BA62121AE60CB00083543B /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		87BA62131AE60CB00083543B /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */,
 				87021ABB1AD5F6240033D6CE /* PVCViewController.h */,
 				87021ABC1AD5F6240033D6CE /* PVCViewController.m */,
-				8760BC711ADB5D6500572049 /* ListaActividades.plist */,
 				87021AB81AD5E7320033D6CE /* AvisosTableViewController.h */,
 				87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */,
 				87021A911AD5D9CB0033D6CE /* Images.xcassets */,
@@ -310,7 +307,6 @@
 				87BA621D1AE60CB00083543B /* 10.png in Resources */,
 				87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */,
 				87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */,
-				8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */,
 				87BA62211AE60CB00083543B /* 4.png in Resources */,
 				87021A901AD5D9CB0033D6CE /* Main.storyboard in Resources */,
 				87BA62251AE60CB00083543B /* 8.png in Resources */,

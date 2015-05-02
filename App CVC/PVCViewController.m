@@ -41,9 +41,6 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     UIApplication *app = [UIApplication sharedApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aplicacionBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
     
-    //Se cambia el color de fondo del view principal
-    self.view.backgroundColor = [UIColor colorWithRed:(27.0/255) green:(163.0/255) blue:(209.0/255) alpha:1];
-    
     //Se establecen colores y cosas así
     [self.btnEliminar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnAgregar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -290,7 +287,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         UIView *newView = [[UIView alloc] initWithFrame:frame];
         
-        newView.backgroundColor = [UIColor grayColor]; //Cambiar el color, un gris claro podría ser... se deja para después
+        //newView.backgroundColor = [UIColor grayColor]; //Cambiar el color, un gris claro podría ser... se deja para después
         
         //TODO: encontrar una forma de determinar los indices de los botones de la pag actual
         //Formula matemática?
@@ -578,7 +575,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     }
     view.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height + altoView);
     
-    view.backgroundColor = [UIColor greenColor]; //Para fines de visualización de prueba, cambiar acorde al diseño
+    //view.backgroundColor = [UIColor greenColor]; //Para fines de visualización de prueba, cambiar acorde al diseño
 
     //Se crean views para cada actividad
     for (NSInteger i = 0; i < cantActividades; i++) {
@@ -590,7 +587,8 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         actividad.origin.y = posY;
     
         UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
-        viewActividad.backgroundColor = [UIColor colorWithRed:(214.0/255) green:(214.0/255) blue:(214.0/255) alpha:1];
+        //viewActividad.backgroundColor = [UIColor colorWithRed:(214.0/255) green:(214.0/255) blue:(214.0/255) alpha:1];
+        viewActividad.backgroundColor = [UIColor colorWithRed:(109.0/255) green:(218.0/255) blue:(255.0/255) alpha:1];
         
         NSDictionary *datosActividad = [actividades objectAtIndex:i];
         
