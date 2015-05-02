@@ -42,10 +42,10 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aplicacionBackground:) name:UIApplicationDidEnterBackgroundNotification object:app];
     
     //Se establecen colores y cosas así
-    [self.btnEliminar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    /*[self.btnEliminar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnAgregar setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.labelSemestre setTextColor:[UIColor whiteColor]];
-    [self.labelTitulo setTextColor:[UIColor whiteColor]];
+    [self.labelTitulo setTextColor:[UIColor whiteColor]];*/
     
     //Se cargan las actividades
     [self cargarArchivo];
@@ -55,8 +55,12 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     self.title = @"Plan de Vida y Carrera";
     // Do any additional setup after loading the view.
     
+    //Propiedades de los scrollviews
     self.scrollView.delegate = self;
     self.semestreScrollView.delegate = self;
+    
+    self.semestreScrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    self.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     
     //Se inicializan los botones
     [self inicializacionBotones];
@@ -188,9 +192,11 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     if (semestres <= 9 || self.labelSemestre.text.integerValue < semestres) {
         self.btnEliminar.enabled = NO;
+        self.btnEliminar.hidden = YES;
     }
     else {
         self.btnEliminar.enabled = YES;
+        self.btnEliminar.hidden = NO;
     }
     
     CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
@@ -370,6 +376,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         //self.labelSemestre.text = [NSString stringWithFormat:@"%ld", (long)page];
         
         UIScrollView *newView = [[UIScrollView alloc] initWithFrame:frame];
+        newView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
         
         //Se agregan las actividades a cada semestre
         [self agregarActividadesExistentes:newView pageNo:page];
