@@ -266,6 +266,14 @@ Plan de Vida y Carrera</string>
                                 <rect key="frame" x="0.0" y="100" width="320" height="377"/>
                                 <color key="backgroundColor" red="0.21176470588235294" green="0.42745098039215684" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="377" id="bmp-BV-TJ4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bmp-BV-TJ4"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="C12-w6-rS9" appends="YES" id="kIg-lV-1Li"/>
                                     <outletCollection property="gestureRecognizers" destination="DtV-B2-vYz" appends="YES" id="iYq-Dl-98K"/>
@@ -277,6 +285,8 @@ Plan de Vida y Carrera</string>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.42745098040000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aPh-mB-PTX" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="topMargin" constant="100" id="1KU-WQ-0FV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="aPh-mB-PTX" secondAttribute="bottom" constant="91" id="2SL-sL-6sl"/>
                             <constraint firstAttribute="bottom" secondItem="hNH-4E-zCt" secondAttribute="bottom" id="2X6-Ew-Qjt"/>
                             <constraint firstItem="hNH-4E-zCt" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" id="2un-qD-Edw"/>
                             <constraint firstItem="x1K-dr-52y" firstAttribute="leading" secondItem="oan-Tf-dva" secondAttribute="leading" constant="195" id="3iy-jM-vjT"/>
@@ -302,8 +312,10 @@ Plan de Vida y Carrera</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="oRb-9G-ED4"/>
                                 <exclude reference="BP6-BI-klb"/>
                                 <exclude reference="ObC-TV-HFy"/>
+                                <exclude reference="6O8-As-K1D"/>
                             </mask>
                         </variation>
                     </view>
