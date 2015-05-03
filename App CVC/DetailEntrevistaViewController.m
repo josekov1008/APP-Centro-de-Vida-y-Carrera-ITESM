@@ -29,12 +29,17 @@
     // Update the user interface for the detail item.
     if (self.detailItem) {
 
+        self.title = [self.detailItem objectForKey:@"nombre"];
+        
         self.lbNombre.text = [self.detailItem	objectForKey: @"nombre"];
         self.lbNombre.lineBreakMode = NSLineBreakByWordWrapping;
         self.lbNombre.numberOfLines = 0;
         
         self.txtDescription.text = [self.detailItem	objectForKey: @"descripcion"];
-        self.txtDescription.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
+        self.txtDescription.textColor = [UIColor colorWithRed:(185.0/255.0) green:(237.0/255.0) blue:(255.0/255.0) alpha:1];
+        self.txtDescription.font = [UIFont fontWithName:@"Helvetica Neue" size:17];
+        [self.txtDescription sizeToFit];
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
 }
 

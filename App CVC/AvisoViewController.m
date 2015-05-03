@@ -48,6 +48,11 @@
         NSURL *nsurl = [NSURL URLWithString:stringUrl];
         NSData *data = [[NSData alloc]initWithContentsOfURL:nsurl];
         self.imgFoto.image = [UIImage imageWithData:data];
+        
+        self.lbDetalle.font = [UIFont fontWithName:@"Helvetica Neue" size:17];
+        [self.lbDetalle sizeToFit];
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        
     }
 }
 

@@ -25,7 +25,7 @@
     
     NSString *pathPList = [[NSBundle mainBundle] pathForResource: @"TipsEntrevista" ofType: @"plist"];
     self.tipsEntrevista = [[NSArray alloc] initWithContentsOfFile:pathPList];
-   
+    self.view.backgroundColor = [UIColor colorWithRed:(54.0/255.0) green:(109.0/255.0) blue:(127.0/255.0) alpha:1]; //Color para las celdas vacias
 }
 
 - (void)didReceiveMemoryWarning {
