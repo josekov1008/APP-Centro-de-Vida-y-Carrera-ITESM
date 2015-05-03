@@ -7,8 +7,12 @@
 //
 
 #import "TipsEntrevistaTableViewController.h"
+#import "DetailEntrevistaViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface TipsEntrevistaTableViewController ()
+
+@property NSArray *tipsEntrevista;
 
 @end
 
@@ -17,11 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.title = @"Tips para Entrevista";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *pathPList = [[NSBundle mainBundle] pathForResource: @"TipsEntrevista" ofType: @"plist"];
+    self.tipsEntrevista = [[NSArray alloc] initWithContentsOfFile:pathPList];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +36,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.tipsEntrevista.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (CustomTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *object = self.tipsEntrevista[indexPath.row];
+    //    cell.textLabel.text = [object description];
+    
+    cell.lbTip.text = [object	objectForKey: @"nombre"];
+    
+    NSString *strImage = [object    objectForKey: @"imagen"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fullImgPath=[documentsDirectory stringByAppendingPathComponent:[NSString stringWithString:strImage]];
+    UIImage *imagen = [UIImage imageWithContentsOfFile:fullImgPath];
+    
+    cell.uiImage.image = imagen;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,14 +97,14 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showDetailEntrevista"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDictionary *object = self.tipsEntrevista[indexPath.row];
+        [[segue destinationViewController] setDetailItem:object];
+    }
 }
-*/
 
 @end

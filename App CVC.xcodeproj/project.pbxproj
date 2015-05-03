@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADB0EAE1AEDCFEF00D0905A /* TipsCurriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB0EAD1AEDCFEF00D0905A /* TipsCurriculum.plist */; };
+		0ADB0EB11AEDD0AA00D0905A /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB0EB01AEDD0AA00D0905A /* CustomTableViewCell.m */; };
+		0ADB0EB31AEE014D00D0905A /* TipsEntrevista.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB0EB21AEE014D00D0905A /* TipsEntrevista.plist */; };
+		0ADB0EB61AEE078D00D0905A /* DetailEntrevistaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB0EB51AEE078C00D0905A /* DetailEntrevistaViewController.m */; };
+		0ADB0EB91AEE29B000D0905A /* DetailCurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB0EB81AEE29B000D0905A /* DetailCurriculumViewController.m */; };
 		87021A871AD5D9CB0033D6CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021A861AD5D9CB0033D6CE /* main.m */; };
 		87021A8A1AD5D9CB0033D6CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021A891AD5D9CB0033D6CE /* AppDelegate.m */; };
 		87021A8D1AD5D9CB0033D6CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021A8C1AD5D9CB0033D6CE /* ViewController.m */; };
@@ -39,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ADB0EAD1AEDCFEF00D0905A /* TipsCurriculum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TipsCurriculum.plist; sourceTree = "<group>"; };
+		0ADB0EAF1AEDD0AA00D0905A /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		0ADB0EB01AEDD0AA00D0905A /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		0ADB0EB21AEE014D00D0905A /* TipsEntrevista.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TipsEntrevista.plist; sourceTree = "<group>"; };
+		0ADB0EB41AEE078C00D0905A /* DetailEntrevistaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailEntrevistaViewController.h; sourceTree = "<group>"; };
+		0ADB0EB51AEE078C00D0905A /* DetailEntrevistaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailEntrevistaViewController.m; sourceTree = "<group>"; };
+		0ADB0EB71AEE29B000D0905A /* DetailCurriculumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCurriculumViewController.h; sourceTree = "<group>"; };
+		0ADB0EB81AEE29B000D0905A /* DetailCurriculumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCurriculumViewController.m; sourceTree = "<group>"; };
 		87021A811AD5D9CB0033D6CE /* App CVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App CVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87021A851AD5D9CB0033D6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87021A861AD5D9CB0033D6CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,13 +128,21 @@
 				87021A8B1AD5D9CB0033D6CE /* ViewController.h */,
 				87021A8C1AD5D9CB0033D6CE /* ViewController.m */,
 				87021A8E1AD5D9CB0033D6CE /* Main.storyboard */,
+				0ADB0EB71AEE29B000D0905A /* DetailCurriculumViewController.h */,
+				0ADB0EB81AEE29B000D0905A /* DetailCurriculumViewController.m */,
+				0ADB0EB41AEE078C00D0905A /* DetailEntrevistaViewController.h */,
+				0ADB0EB51AEE078C00D0905A /* DetailEntrevistaViewController.m */,
+				0ADB0EAF1AEDD0AA00D0905A /* CustomTableViewCell.h */,
+				0ADB0EB01AEDD0AA00D0905A /* CustomTableViewCell.m */,
 				87021AC11AD613640033D6CE /* TipsCurriculumTableViewController.h */,
 				87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */,
+				0ADB0EB21AEE014D00D0905A /* TipsEntrevista.plist */,
 				87021ABE1AD6131D0033D6CE /* TipsEntrevistaTableViewController.h */,
 				87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */,
 				87021ABB1AD5F6240033D6CE /* PVCViewController.h */,
 				87021ABC1AD5F6240033D6CE /* PVCViewController.m */,
 				8760BC711ADB5D6500572049 /* ListaActividades.plist */,
+				0ADB0EAD1AEDCFEF00D0905A /* TipsCurriculum.plist */,
 				87021AB81AD5E7320033D6CE /* AvisosTableViewController.h */,
 				87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */,
 				87021A911AD5D9CB0033D6CE /* Images.xcassets */,
@@ -252,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */,
+				0ADB0EAE1AEDCFEF00D0905A /* TipsCurriculum.plist in Resources */,
 				87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */,
 				8760BC721ADB5D6500572049 /* ListaActividades.plist in Resources */,
 				87021A901AD5D9CB0033D6CE /* Main.storyboard in Resources */,
@@ -261,6 +283,7 @@
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,
 				87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */,
+				0ADB0EB31AEE014D00D0905A /* TipsEntrevista.plist in Resources */,
 				87021A921AD5D9CB0033D6CE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,10 +304,13 @@
 			files = (
 				87B53D091ADCC08C0039FFB3 /* PVCViewController.m in Sources */,
 				87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */,
+				0ADB0EB61AEE078D00D0905A /* DetailEntrevistaViewController.m in Sources */,
 				87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */,
 				87021A8D1AD5D9CB0033D6CE /* ViewController.m in Sources */,
 				87021A8A1AD5D9CB0033D6CE /* AppDelegate.m in Sources */,
 				87021ABA1AD5E7320033D6CE /* AvisosTableViewController.m in Sources */,
+				0ADB0EB11AEDD0AA00D0905A /* CustomTableViewCell.m in Sources */,
+				0ADB0EB91AEE29B000D0905A /* DetailCurriculumViewController.m in Sources */,
 				87021A871AD5D9CB0033D6CE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,11 @@
 //
 
 #import "TipsCurriculumTableViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface TipsCurriculumTableViewController ()
+
+@property NSArray *tipsCurriculum;
 
 @end
 
@@ -17,11 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+   self.title = @"Tips para Curriculum";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   NSString *pathPList = [[NSBundle mainBundle] pathForResource: @"TipsCurriculum" ofType: @"plist"];
+   self.tipsCurriculum = [[NSArray alloc] initWithContentsOfFile:pathPList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +34,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.tipsCurriculum.count;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (CustomTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        
+    NSDictionary *object = self.tipsCurriculum[indexPath.row];
+    //    cell.textLabel.text = [object description];
     
-    // Configure the cell...
+    cell.lbTip.text = [object	objectForKey: @"nombre"];
+    
+    NSString *strImage = [object    objectForKey: @"imagen"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fullImgPath=[documentsDirectory stringByAppendingPathComponent:[NSString stringWithString:strImage]];
+    UIImage *imagen = [UIImage imageWithContentsOfFile:fullImgPath];
+    
+    cell.uiImage.image = imagen;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
