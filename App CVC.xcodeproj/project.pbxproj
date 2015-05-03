@@ -38,6 +38,17 @@
 		87BA62251AE60CB00083543B /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA621A1AE60CB00083543B /* 8.png */; };
 		87BA62261AE60CB00083543B /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA621B1AE60CB00083543B /* 9.png */; };
 		87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E050E21AD71667008D0BAE /* buttonPlaceholder.png */; };
+		87FB91D91AF5BE9200835584 /* 147.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91CE1AF5BE9200835584 /* 147.png */; };
+		87FB91DA1AF5BE9200835584 /* concentracion.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91CF1AF5BE9200835584 /* concentracion.png */; };
+		87FB91DC1AF5BE9200835584 /* deportivas.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D11AF5BE9200835584 /* deportivas.png */; };
+		87FB91DE1AF5BE9200835584 /* idiomas.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D31AF5BE9200835584 /* idiomas.png */; };
+		87FB91DF1AF5BE9200835584 /* modalidad.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D41AF5BE9200835584 /* modalidad.png */; };
+		87FB91E01AF5BE9200835584 /* pi.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D51AF5BE9200835584 /* pi.png */; };
+		87FB91E11AF5BE9200835584 /* rg.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D61AF5BE9200835584 /* rg.png */; };
+		87FB91E21AF5BE9200835584 /* ssc.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D71AF5BE9200835584 /* ssc.png */; };
+		87FB91E31AF5BE9200835584 /* ssp.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D81AF5BE9200835584 /* ssp.png */; };
+		87FB91E71AF5C23C00835584 /* culturales.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91E51AF5C23C00835584 /* culturales.png */; };
+		87FB91E81AF5C23C00835584 /* estudiantiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91E61AF5C23C00835584 /* estudiantiles.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +103,17 @@
 		87BA621A1AE60CB00083543B /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		87BA621B1AE60CB00083543B /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		87E050E21AD71667008D0BAE /* buttonPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPlaceholder.png; sourceTree = "<group>"; };
+		87FB91CE1AF5BE9200835584 /* 147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 147.png; sourceTree = "<group>"; };
+		87FB91CF1AF5BE9200835584 /* concentracion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concentracion.png; sourceTree = "<group>"; };
+		87FB91D11AF5BE9200835584 /* deportivas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deportivas.png; sourceTree = "<group>"; };
+		87FB91D31AF5BE9200835584 /* idiomas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idiomas.png; sourceTree = "<group>"; };
+		87FB91D41AF5BE9200835584 /* modalidad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modalidad.png; sourceTree = "<group>"; };
+		87FB91D51AF5BE9200835584 /* pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi.png; sourceTree = "<group>"; };
+		87FB91D61AF5BE9200835584 /* rg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rg.png; sourceTree = "<group>"; };
+		87FB91D71AF5BE9200835584 /* ssc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssc.png; sourceTree = "<group>"; };
+		87FB91D81AF5BE9200835584 /* ssp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssp.png; sourceTree = "<group>"; };
+		87FB91E51AF5C23C00835584 /* culturales.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = culturales.png; sourceTree = "<group>"; };
+		87FB91E61AF5C23C00835584 /* estudiantiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estudiantiles.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +155,7 @@
 		87021A831AD5D9CB0033D6CE /* App CVC */ = {
 			isa = PBXGroup;
 			children = (
+				87FB91E41AF5BE9A00835584 /* iconos */,
 				873F56E41AF2C674001B0F97 /* imagenesBotones */,
 				87BA62101AE60CB00083543B /* Imagenes Actividades */,
 				87B53D081ADCB3FC0039FFB3 /* Resources */,
@@ -185,6 +208,17 @@
 		873F56E41AF2C674001B0F97 /* imagenesBotones */ = {
 			isa = PBXGroup;
 			children = (
+				87FB91E51AF5C23C00835584 /* culturales.png */,
+				87FB91E61AF5C23C00835584 /* estudiantiles.png */,
+				87FB91CE1AF5BE9200835584 /* 147.png */,
+				87FB91CF1AF5BE9200835584 /* concentracion.png */,
+				87FB91D11AF5BE9200835584 /* deportivas.png */,
+				87FB91D31AF5BE9200835584 /* idiomas.png */,
+				87FB91D41AF5BE9200835584 /* modalidad.png */,
+				87FB91D51AF5BE9200835584 /* pi.png */,
+				87FB91D61AF5BE9200835584 /* rg.png */,
+				87FB91D71AF5BE9200835584 /* ssc.png */,
+				87FB91D81AF5BE9200835584 /* ssp.png */,
 			);
 			name = imagenesBotones;
 			sourceTree = "<group>";
@@ -222,6 +256,13 @@
 			);
 			name = "Imagenes Actividades";
 			path = actividades;
+			sourceTree = "<group>";
+		};
+		87FB91E41AF5BE9A00835584 /* iconos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iconos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,29 +345,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87FB91E71AF5C23C00835584 /* culturales.png in Resources */,
 				87BA621D1AE60CB00083543B /* 10.png in Resources */,
 				87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */,
 				87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */,
+				87FB91DE1AF5BE9200835584 /* idiomas.png in Resources */,
 				87BA62211AE60CB00083543B /* 4.png in Resources */,
+				87FB91E31AF5BE9200835584 /* ssp.png in Resources */,
 				87021A901AD5D9CB0033D6CE /* Main.storyboard in Resources */,
 				87BA62251AE60CB00083543B /* 8.png in Resources */,
+				87FB91D91AF5BE9200835584 /* 147.png in Resources */,
+				87FB91DA1AF5BE9200835584 /* concentracion.png in Resources */,
 				87BA621E1AE60CB00083543B /* 11.png in Resources */,
 				873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */,
 				87BA62241AE60CB00083543B /* 7.png in Resources */,
 				873F56E81AF2CB8E001B0F97 /* menuBackground.png in Resources */,
+				87FB91DC1AF5BE9200835584 /* deportivas.png in Resources */,
 				87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */,
 				87223A7B1ADDD4D700DAC2FF /* close.png in Resources */,
+				87FB91E21AF5BE9200835584 /* ssc.png in Resources */,
+				87FB91E11AF5BE9200835584 /* rg.png in Resources */,
 				87BA62261AE60CB00083543B /* 9.png in Resources */,
 				873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */,
+				87FB91E01AF5BE9200835584 /* pi.png in Resources */,
 				87BA62231AE60CB00083543B /* 6.png in Resources */,
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,
+				87FB91E81AF5C23C00835584 /* estudiantiles.png in Resources */,
 				87BA62201AE60CB00083543B /* 3.png in Resources */,
 				87BA621C1AE60CB00083543B /* 1.png in Resources */,
 				87BA621F1AE60CB00083543B /* 2.png in Resources */,
 				87BA62221AE60CB00083543B /* 5.png in Resources */,
 				87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */,
 				87021A921AD5D9CB0033D6CE /* Images.xcassets in Resources */,
+				87FB91DF1AF5BE9200835584 /* modalidad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
