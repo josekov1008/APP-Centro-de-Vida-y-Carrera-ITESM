@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldl-Vc-geO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ldl-Vc-geO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -152,6 +152,7 @@ Plan de Vida y Carrera</string>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s1N-bd-irb" id="nce-71-nJo">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.54509803921568623" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="bO3-Fg-Byq" kind="show" identifier="showAviso" id="DQD-Ag-7oO"/>
                                 </connections>
@@ -190,21 +191,23 @@ Plan de Vida y Carrera</string>
                                     <constraint firstAttribute="height" constant="21" id="QSA-BU-Qjm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyK-eF-61T">
                                 <rect key="frame" x="16" y="72" width="288" height="77"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="6gV-iD-l7U"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.72549019607843135" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.28235294119999998" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="X1x-M5-T4G" firstAttribute="top" secondItem="gOo-RX-LwY" secondAttribute="bottom" constant="8" symbolic="YES" id="9ly-s3-jxH"/>
                             <constraint firstItem="n2p-Wa-ROU" firstAttribute="top" secondItem="oyK-eF-61T" secondAttribute="bottom" constant="8" symbolic="YES" id="CvA-20-867"/>
@@ -346,7 +349,7 @@ Plan de Vida y Carrera</string>
                                 <rect key="frame" x="140" y="539" width="39" height="37"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.42745098040000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12941176470588237" green="0.28235294117647058" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aPh-mB-PTX" firstAttribute="top" secondItem="oan-Tf-dva" secondAttribute="topMargin" constant="100" id="1KU-WQ-0FV"/>
                             <constraint firstAttribute="bottomMargin" secondItem="aPh-mB-PTX" secondAttribute="bottom" constant="91" id="2SL-sL-6sl"/>

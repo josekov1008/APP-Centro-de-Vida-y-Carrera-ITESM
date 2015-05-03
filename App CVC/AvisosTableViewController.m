@@ -27,6 +27,8 @@
     NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"Avisos" ofType:@"plist"];
     self.avisos = [[NSArray alloc] initWithContentsOfFile:pathPlist];
     self.title = @"Avisos";
+    
+    self.view.backgroundColor = [UIColor colorWithRed:(54.0/255.0) green:(109.0/255.0) blue:(127.0/255.0) alpha:1]; //Color para las celdas vacias
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +62,7 @@
     
     NSDictionary *object = self.avisos[indexPath.row];
     cell.textLabel.text = [object objectForKey:@"aviso"];
+    cell.textLabel.textColor = [UIColor colorWithRed:(185.0/255.0) green:(237.0/255.0) blue:(255.0/255.0) alpha:1];
     return cell;
 }
 

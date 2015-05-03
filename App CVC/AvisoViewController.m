@@ -42,6 +42,7 @@
     // Update the user interface for the detail item.
     if (self.detailItem) {
         self.lbDetalle.text = [self.detailItem objectForKey:@"detalles"];
+        self.lbDetalle.textColor = [UIColor colorWithRed:(185.0/255.0) green:(237.0/255.0) blue:(255.0/255.0) alpha:1];
         self.lbFecha.text = fechaMostrar;
         NSString *stringUrl = [self.detailItem objectForKey:@"urlFoto"];
         NSURL *nsurl = [NSURL URLWithString:stringUrl];
