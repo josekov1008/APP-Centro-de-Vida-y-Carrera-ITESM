@@ -35,6 +35,7 @@
         self.lbNombre.numberOfLines = 0;
         
         self.txtDescription.text = [self.detailItem	objectForKey: @"descripcion"];
+        self.txtDescription.font = [UIFont fontWithName:@"Helvetica Neue" size:15];
     }
 }
 
