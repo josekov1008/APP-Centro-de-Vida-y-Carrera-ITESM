@@ -18,13 +18,15 @@
 		87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB21AD5E47B0033D6CE /* botonPVC.png */; };
 		87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB41AD5E4810033D6CE /* botonCurriculum.png */; };
 		87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */ = {isa = PBXBuildFile; fileRef = 87021AB61AD5E4880033D6CE /* botonAvisos.png */; };
-		87021ABA1AD5E7320033D6CE /* AvisosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */; };
 		87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */; };
 		87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */; };
 		87223A7B1ADDD4D700DAC2FF /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 87223A7A1ADDD4D700DAC2FF /* close.png */; };
 		873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E51AF2C890001B0F97 /* CVC-Logo.png */; };
 		873F56E81AF2CB8E001B0F97 /* menuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E71AF2CB8E001B0F97 /* menuBackground.png */; };
 		873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E91AF2D036001B0F97 /* logoTecBlanco.png */; };
+		87B29B631AF5CDA0006EDB02 /* Avisos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B29B5E1AF5CDA0006EDB02 /* Avisos.plist */; };
+		87B29B641AF5CDA0006EDB02 /* AvisosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B29B601AF5CDA0006EDB02 /* AvisosTableViewController.m */; };
+		87B29B651AF5CDA0006EDB02 /* AvisoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B29B621AF5CDA0006EDB02 /* AvisoViewController.m */; };
 		87B53D091ADCC08C0039FFB3 /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87021ABC1AD5F6240033D6CE /* PVCViewController.m */; };
 		87BA621C1AE60CB00083543B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA62111AE60CB00083543B /* 1.png */; };
 		87BA621D1AE60CB00083543B /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA62121AE60CB00083543B /* 10.png */; };
@@ -38,10 +40,6 @@
 		87BA62251AE60CB00083543B /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA621A1AE60CB00083543B /* 8.png */; };
 		87BA62261AE60CB00083543B /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BA621B1AE60CB00083543B /* 9.png */; };
 		87E050E31AD71667008D0BAE /* buttonPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E050E21AD71667008D0BAE /* buttonPlaceholder.png */; };
-<<<<<<< HEAD
-		FBDC20F41AE5B2C30084E71F /* Avisos.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDC20F31AE5B2C30084E71F /* Avisos.plist */; };
-		FBDC20F71AE5B5430084E71F /* AvisoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDC20F61AE5B5430084E71F /* AvisoViewController.m */; };
-=======
 		87FB91D91AF5BE9200835584 /* 147.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91CE1AF5BE9200835584 /* 147.png */; };
 		87FB91DA1AF5BE9200835584 /* concentracion.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91CF1AF5BE9200835584 /* concentracion.png */; };
 		87FB91DC1AF5BE9200835584 /* deportivas.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D11AF5BE9200835584 /* deportivas.png */; };
@@ -53,7 +51,6 @@
 		87FB91E31AF5BE9200835584 /* ssp.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91D81AF5BE9200835584 /* ssp.png */; };
 		87FB91E71AF5C23C00835584 /* culturales.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91E51AF5C23C00835584 /* culturales.png */; };
 		87FB91E81AF5C23C00835584 /* estudiantiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 87FB91E61AF5C23C00835584 /* estudiantiles.png */; };
->>>>>>> Elaboracion-PVC
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +81,6 @@
 		87021AB21AD5E47B0033D6CE /* botonPVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonPVC.png; sourceTree = "<group>"; };
 		87021AB41AD5E4810033D6CE /* botonCurriculum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonCurriculum.png; sourceTree = "<group>"; };
 		87021AB61AD5E4880033D6CE /* botonAvisos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonAvisos.png; sourceTree = "<group>"; };
-		87021AB81AD5E7320033D6CE /* AvisosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvisosTableViewController.h; sourceTree = "<group>"; };
-		87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvisosTableViewController.m; sourceTree = "<group>"; };
 		87021ABB1AD5F6240033D6CE /* PVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVCViewController.h; sourceTree = "<group>"; };
 		87021ABC1AD5F6240033D6CE /* PVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVCViewController.m; sourceTree = "<group>"; };
 		87021ABE1AD6131D0033D6CE /* TipsEntrevistaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsEntrevistaTableViewController.h; sourceTree = "<group>"; };
@@ -96,6 +91,11 @@
 		873F56E51AF2C890001B0F97 /* CVC-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CVC-Logo.png"; sourceTree = "<group>"; };
 		873F56E71AF2CB8E001B0F97 /* menuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBackground.png; sourceTree = "<group>"; };
 		873F56E91AF2D036001B0F97 /* logoTecBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTecBlanco.png; sourceTree = "<group>"; };
+		87B29B5E1AF5CDA0006EDB02 /* Avisos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Avisos.plist; sourceTree = "<group>"; };
+		87B29B5F1AF5CDA0006EDB02 /* AvisosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvisosTableViewController.h; sourceTree = "<group>"; };
+		87B29B601AF5CDA0006EDB02 /* AvisosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvisosTableViewController.m; sourceTree = "<group>"; };
+		87B29B611AF5CDA0006EDB02 /* AvisoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvisoViewController.h; sourceTree = "<group>"; };
+		87B29B621AF5CDA0006EDB02 /* AvisoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvisoViewController.m; sourceTree = "<group>"; };
 		87BA62111AE60CB00083543B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		87BA62121AE60CB00083543B /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		87BA62131AE60CB00083543B /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -108,11 +108,6 @@
 		87BA621A1AE60CB00083543B /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		87BA621B1AE60CB00083543B /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		87E050E21AD71667008D0BAE /* buttonPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPlaceholder.png; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		FBDC20F31AE5B2C30084E71F /* Avisos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Avisos.plist; sourceTree = "<group>"; };
-		FBDC20F51AE5B5430084E71F /* AvisoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvisoViewController.h; sourceTree = "<group>"; };
-		FBDC20F61AE5B5430084E71F /* AvisoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvisoViewController.m; sourceTree = "<group>"; };
-=======
 		87FB91CE1AF5BE9200835584 /* 147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 147.png; sourceTree = "<group>"; };
 		87FB91CF1AF5BE9200835584 /* concentracion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concentracion.png; sourceTree = "<group>"; };
 		87FB91D11AF5BE9200835584 /* deportivas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deportivas.png; sourceTree = "<group>"; };
@@ -124,7 +119,6 @@
 		87FB91D81AF5BE9200835584 /* ssp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ssp.png; sourceTree = "<group>"; };
 		87FB91E51AF5C23C00835584 /* culturales.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = culturales.png; sourceTree = "<group>"; };
 		87FB91E61AF5C23C00835584 /* estudiantiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estudiantiles.png; sourceTree = "<group>"; };
->>>>>>> Elaboracion-PVC
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,21 +165,21 @@
 				87BA62101AE60CB00083543B /* Imagenes Actividades */,
 				87B53D081ADCB3FC0039FFB3 /* Resources */,
 				87021A881AD5D9CB0033D6CE /* AppDelegate.h */,
-				FBDC20F31AE5B2C30084E71F /* Avisos.plist */,
+				87B29B5E1AF5CDA0006EDB02 /* Avisos.plist */,
+				87B29B5F1AF5CDA0006EDB02 /* AvisosTableViewController.h */,
+				87B29B601AF5CDA0006EDB02 /* AvisosTableViewController.m */,
+				87B29B611AF5CDA0006EDB02 /* AvisoViewController.h */,
+				87B29B621AF5CDA0006EDB02 /* AvisoViewController.m */,
 				87021A891AD5D9CB0033D6CE /* AppDelegate.m */,
 				87021A8B1AD5D9CB0033D6CE /* ViewController.h */,
 				87021A8C1AD5D9CB0033D6CE /* ViewController.m */,
 				87021A8E1AD5D9CB0033D6CE /* Main.storyboard */,
-				FBDC20F51AE5B5430084E71F /* AvisoViewController.h */,
-				FBDC20F61AE5B5430084E71F /* AvisoViewController.m */,
 				87021AC11AD613640033D6CE /* TipsCurriculumTableViewController.h */,
 				87021AC21AD613640033D6CE /* TipsCurriculumTableViewController.m */,
 				87021ABE1AD6131D0033D6CE /* TipsEntrevistaTableViewController.h */,
 				87021ABF1AD6131D0033D6CE /* TipsEntrevistaTableViewController.m */,
 				87021ABB1AD5F6240033D6CE /* PVCViewController.h */,
 				87021ABC1AD5F6240033D6CE /* PVCViewController.m */,
-				87021AB81AD5E7320033D6CE /* AvisosTableViewController.h */,
-				87021AB91AD5E7320033D6CE /* AvisosTableViewController.m */,
 				87021A911AD5D9CB0033D6CE /* Images.xcassets */,
 				87021A931AD5D9CB0033D6CE /* LaunchScreen.xib */,
 				87021A841AD5D9CB0033D6CE /* Supporting Files */,
@@ -360,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87FB91E71AF5C23C00835584 /* culturales.png in Resources */,
+				87B29B631AF5CDA0006EDB02 /* Avisos.plist in Resources */,
 				87BA621D1AE60CB00083543B /* 10.png in Resources */,
 				87021AB31AD5E47B0033D6CE /* botonPVC.png in Resources */,
 				87021AB71AD5E4880033D6CE /* botonAvisos.png in Resources */,
@@ -377,17 +372,12 @@
 				87FB91DC1AF5BE9200835584 /* deportivas.png in Resources */,
 				87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */,
 				87223A7B1ADDD4D700DAC2FF /* close.png in Resources */,
-<<<<<<< HEAD
-				87021AAB1AD5DA780033D6CE /* CVC-Logo.jpg in Resources */,
-				FBDC20F41AE5B2C30084E71F /* Avisos.plist in Resources */,
-=======
 				87FB91E21AF5BE9200835584 /* ssc.png in Resources */,
 				87FB91E11AF5BE9200835584 /* rg.png in Resources */,
 				87BA62261AE60CB00083543B /* 9.png in Resources */,
 				873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */,
 				87FB91E01AF5BE9200835584 /* pi.png in Resources */,
 				87BA62231AE60CB00083543B /* 6.png in Resources */,
->>>>>>> Elaboracion-PVC
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,
 				87FB91E81AF5C23C00835584 /* estudiantiles.png in Resources */,
@@ -416,12 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B53D091ADCC08C0039FFB3 /* PVCViewController.m in Sources */,
-				FBDC20F71AE5B5430084E71F /* AvisoViewController.m in Sources */,
 				87021AC31AD613640033D6CE /* TipsCurriculumTableViewController.m in Sources */,
+				87B29B641AF5CDA0006EDB02 /* AvisosTableViewController.m in Sources */,
+				87B29B651AF5CDA0006EDB02 /* AvisoViewController.m in Sources */,
 				87021AC01AD6131D0033D6CE /* TipsEntrevistaTableViewController.m in Sources */,
 				87021A8D1AD5D9CB0033D6CE /* ViewController.m in Sources */,
 				87021A8A1AD5D9CB0033D6CE /* AppDelegate.m in Sources */,
-				87021ABA1AD5E7320033D6CE /* AvisosTableViewController.m in Sources */,
 				87021A871AD5D9CB0033D6CE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "App CVC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -556,7 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "App CVC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
