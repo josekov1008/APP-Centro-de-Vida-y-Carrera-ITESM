@@ -27,6 +27,12 @@
 		87223A7B1ADDD4D700DAC2FF /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 87223A7A1ADDD4D700DAC2FF /* close.png */; };
 		873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E51AF2C890001B0F97 /* CVC-Logo.png */; };
 		873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 873F56E91AF2D036001B0F97 /* logoTecBlanco.png */; };
+		876756761AF69E92004A7462 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756701AF69E92004A7462 /* Icon-60@2x.png */; };
+		876756771AF69E92004A7462 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756711AF69E92004A7462 /* Icon-60@3x.png */; };
+		876756781AF69E92004A7462 /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756721AF69E92004A7462 /* Icon-Small-40@2x.png */; };
+		876756791AF69E92004A7462 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756731AF69E92004A7462 /* Icon-Small-40@3x.png */; };
+		8767567A1AF69E92004A7462 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756741AF69E92004A7462 /* Icon-Small@2x.png */; };
+		8767567B1AF69E92004A7462 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 876756751AF69E92004A7462 /* Icon-Small@3x.png */; };
 		87B29B631AF5CDA0006EDB02 /* Avisos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B29B5E1AF5CDA0006EDB02 /* Avisos.plist */; };
 		87B29B641AF5CDA0006EDB02 /* AvisosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B29B601AF5CDA0006EDB02 /* AvisosTableViewController.m */; };
 		87B29B651AF5CDA0006EDB02 /* AvisoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B29B621AF5CDA0006EDB02 /* AvisoViewController.m */; };
@@ -86,7 +92,7 @@
 		0ADB0EB51AEE078C00D0905A /* DetailEntrevistaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailEntrevistaViewController.m; sourceTree = "<group>"; };
 		0ADB0EB71AEE29B000D0905A /* DetailCurriculumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCurriculumViewController.h; sourceTree = "<group>"; };
 		0ADB0EB81AEE29B000D0905A /* DetailCurriculumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCurriculumViewController.m; sourceTree = "<group>"; };
-		87021A811AD5D9CB0033D6CE /* App CVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App CVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87021A811AD5D9CB0033D6CE /* CVC ITESM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVC ITESM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87021A851AD5D9CB0033D6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87021A861AD5D9CB0033D6CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87021A881AD5D9CB0033D6CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +118,12 @@
 		87223A7A1ADDD4D700DAC2FF /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		873F56E51AF2C890001B0F97 /* CVC-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CVC-Logo.png"; sourceTree = "<group>"; };
 		873F56E91AF2D036001B0F97 /* logoTecBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTecBlanco.png; sourceTree = "<group>"; };
+		876756701AF69E92004A7462 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		876756711AF69E92004A7462 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		876756721AF69E92004A7462 /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		876756731AF69E92004A7462 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		876756741AF69E92004A7462 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		876756751AF69E92004A7462 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		87B29B5E1AF5CDA0006EDB02 /* Avisos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Avisos.plist; sourceTree = "<group>"; };
 		87B29B5F1AF5CDA0006EDB02 /* AvisosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvisosTableViewController.h; sourceTree = "<group>"; };
 		87B29B601AF5CDA0006EDB02 /* AvisosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvisosTableViewController.m; sourceTree = "<group>"; };
@@ -182,7 +194,7 @@
 		87021A821AD5D9CB0033D6CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87021A811AD5D9CB0033D6CE /* App CVC.app */,
+				87021A811AD5D9CB0033D6CE /* CVC ITESM.app */,
 				87021A9A1AD5D9CB0033D6CE /* App CVCTests.xctest */,
 			);
 			name = Products;
@@ -325,6 +337,12 @@
 		87FB91E41AF5BE9A00835584 /* iconos */ = {
 			isa = PBXGroup;
 			children = (
+				876756701AF69E92004A7462 /* Icon-60@2x.png */,
+				876756711AF69E92004A7462 /* Icon-60@3x.png */,
+				876756721AF69E92004A7462 /* Icon-Small-40@2x.png */,
+				876756731AF69E92004A7462 /* Icon-Small-40@3x.png */,
+				876756741AF69E92004A7462 /* Icon-Small@2x.png */,
+				876756751AF69E92004A7462 /* Icon-Small@3x.png */,
 			);
 			name = iconos;
 			sourceTree = "<group>";
@@ -346,7 +364,7 @@
 			);
 			name = "App CVC";
 			productName = "App CVC";
-			productReference = 87021A811AD5D9CB0033D6CE /* App CVC.app */;
+			productReference = 87021A811AD5D9CB0033D6CE /* CVC ITESM.app */;
 			productType = "com.apple.product-type.application";
 		};
 		87021A991AD5D9CB0033D6CE /* App CVCTests */ = {
@@ -423,16 +441,20 @@
 				87BA62251AE60CB00083543B /* 8act.png in Resources */,
 				87FB91D91AF5BE9200835584 /* 147.png in Resources */,
 				87FB91DA1AF5BE9200835584 /* concentracion.png in Resources */,
+				8767567B1AF69E92004A7462 /* Icon-Small@3x.png in Resources */,
 				87C50EE81AF68C5E0065DA1A /* n2.png in Resources */,
 				87BA621E1AE60CB00083543B /* 11act.png in Resources */,
 				87C50EEB1AF68C5E0065DA1A /* n5.png in Resources */,
+				876756781AF69E92004A7462 /* Icon-Small-40@2x.png in Resources */,
 				873F56EA1AF2D036001B0F97 /* logoTecBlanco.png in Resources */,
 				87BA62241AE60CB00083543B /* 7act.png in Resources */,
 				87C50EEF1AF68C5E0065DA1A /* n9.png in Resources */,
+				8767567A1AF69E92004A7462 /* Icon-Small@2x.png in Resources */,
 				87FB91DC1AF5BE9200835584 /* deportivas.png in Resources */,
 				87C50EEC1AF68C5E0065DA1A /* n6.png in Resources */,
 				87021AB11AD5E4720033D6CE /* botonEntrevista.png in Resources */,
 				87223A7B1ADDD4D700DAC2FF /* close.png in Resources */,
+				876756771AF69E92004A7462 /* Icon-60@3x.png in Resources */,
 				87C50EF31AF693010065DA1A /* n1.png in Resources */,
 				87FB91E21AF5BE9200835584 /* ssc.png in Resources */,
 				87C50EEE1AF68C5E0065DA1A /* n8.png in Resources */,
@@ -442,6 +464,8 @@
 				873F56E61AF2C890001B0F97 /* CVC-Logo.png in Resources */,
 				87FB91E01AF5BE9200835584 /* pi.png in Resources */,
 				87BA62231AE60CB00083543B /* 6act.png in Resources */,
+				876756761AF69E92004A7462 /* Icon-60@2x.png in Resources */,
+				876756791AF69E92004A7462 /* Icon-Small-40@3x.png in Resources */,
 				87021A951AD5D9CB0033D6CE /* LaunchScreen.xib in Resources */,
 				87021AB51AD5E4810033D6CE /* botonCurriculum.png in Resources */,
 				87FB91E81AF5C23C00835584 /* estudiantiles.png in Resources */,
@@ -607,7 +631,7 @@
 				INFOPLIST_FILE = "App CVC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CVC ITESM";
 			};
 			name = Debug;
 		};
@@ -618,7 +642,7 @@
 				INFOPLIST_FILE = "App CVC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CVC ITESM";
 			};
 			name = Release;
 		};
