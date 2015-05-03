@@ -28,8 +28,11 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        
+
         self.lbNombre.text = [self.detailItem	objectForKey: @"nombre"];
+        self.lbNombre.lineBreakMode = NSLineBreakByWordWrapping;
+        self.lbNombre.numberOfLines = 0;
+        
         self.txtDescription.text = [self.detailItem	objectForKey: @"descripcion"];
     }
 }

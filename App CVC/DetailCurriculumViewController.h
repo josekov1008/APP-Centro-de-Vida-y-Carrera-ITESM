@@ -10,4 +10,9 @@
 
 @interface DetailCurriculumViewController : UIViewController
 
+@property (strong, nonatomic) id detailItem;
+
+@property (strong, nonatomic) IBOutlet UILabel *lbNombre;
+@property (strong, nonatomic) IBOutlet UITextView *txtDescription;
+
 @end
