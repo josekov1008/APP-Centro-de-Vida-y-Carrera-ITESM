@@ -8,7 +8,7 @@
 		<key>descripcion</key>
 		<string>En tiempos de inestabilidad las empresas prefieren apostar por valores sólidos y seguros. Si demuestras en tu currículum que eres una persona capaz, organizada y segura, tendrás muchas más posibilidades de hacerte con un puesto. Así pues, destaca ahora más que nunca, tu experiencia y tus logros.</string>
 		<key>imagen</key>
-		<string>1.jpg</string>
+		<string>n1.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -16,7 +16,7 @@
 		<key>descripcion</key>
 		<string>Recuerda que es un mala época para todos, también para las empresas (especialmente si son medianas o pequeñas).  Así pues, muestra tu preocupación e implicación en los proyectos de los que has formado parte de forma que transmitas al empresario que vas a hacer todo lo que esté en tu mano para conseguir superar los malos tiempos que puede atravesar la empresa.</string>
 		<key>imagen</key>
-		<string>2.jpg</string>
+		<string>n2.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -24,7 +24,7 @@
 		<key>descripcion</key>
 		<string>No sólo el Currículum es importante. La carta de presentación puede brindarte un espacio estupendo para acercarte más a la empresa de forma directa. Muestra tu preocupación, menciona el momento crítico que se atraviesa, e intenta presentar soluciones, ideas. Si te presentas como solución, procura rozar la prepotencia.</string>
 		<key>imagen</key>
-		<string>3.jpg</string>
+		<string>n3.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -32,7 +32,7 @@
 		<key>descripcion</key>
 		<string>Si no suele ser acertado hacer exigencias económicas en el Currículum Vitae, aún lo es menos hacerlas en épocas de inestabilidad económica.  Ten claro lo que necesitas y la remuneración que aceptarás para trabajar, pero intenta dejar las exigencias para más adelante.</string>
 		<key>imagen</key>
-		<string>4.jpg</string>
+		<string>n4.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -40,7 +40,7 @@
 		<key>descripcion</key>
 		<string>Esta es una máxima del currículum vitae. Los empresarios no quieren oír críticas, quejas o lamentos, sino ideas y soluciones. Aunque necesites el empleo y la crisis te golpee, no lo plasmes en el Currículum Vitae. Es antiproductivo.</string>
 		<key>imagen</key>
-		<string>5.jpg</string>
+		<string>n5.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -48,7 +48,7 @@
 		<key>descripcion</key>
 		<string>En momento de pocas contrataciones, las empresas prefieren tener personas que tengan varias habilidades y que sean capaces de encargarse de asuntos de diferente índole. Si te consideras versátil, aprovecha y destácalo tanto en el currículum vitae como en la carta de presentación.</string>
 		<key>imagen</key>
-		<string>6.jpg</string>
+		<string>n6.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -56,7 +56,7 @@
 		<key>descripcion</key>
 		<string>Es tiempo de desconfianza. Desconfianza entre empresas, entre bancos, entre trabajadores…  Ves contracorriente y muéstrate responsable y digno de confianza. Destaca en tus logros las tareas de responsabilidad y transmite seguridad con tus palabras. Utiliza verbos como organizar, desarrollar, planificar.</string>
 		<key>imagen</key>
-		<string>7.jpg</string>
+		<string>n7.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -64,7 +64,7 @@
 		<key>descripcion</key>
 		<string>No te muestres demasiado rígido, resalta tu capacidad de flexibilidad al hablar de tus logros o al enumerar tu experiencia laboral y transmite tus capacidades de adaptación en la carta de presentación.</string>
 		<key>imagen</key>
-		<string>8.jpg</string>
+		<string>n8.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -72,7 +72,7 @@
 		<key>descripcion</key>
 		<string>Si aún no cuentas con un curriculum on-line, no has probado el currículum web o el videocurrículum, es el momento para hacerlo. Diversifica, muévete en varios ámbitos a la vez y difunde tu currículum vitae lo máximo posible. Cuanto más lo hagas,  más posibilidades tendrás de encontrar un empleo.</string>
 		<key>imagen</key>
-		<string>9.jpg</string>
+		<string>n9.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -80,7 +80,7 @@
 		<key>descripcion</key>
 		<string>Aprovecha los malos tiempos y ponlos a tu favor. Exprime tu creatividad y muéstrate diferente. Es momento de cambio y de nuevas ideas, lo que puede ser muy beneficioso para ti, si sabes como aprovecharlo.</string>
 		<key>imagen</key>
-		<string>10.jpg</string>
+		<string>n10.jpg</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -88,7 +88,7 @@
 		<key>descripcion</key>
 		<string>Algunos currículums presentan incongruencias en este sentido, y se perciben negativamente.</string>
 		<key>imagen</key>
-		<string>11.jpg</string>
+		<string>n11.jpg</string>
 	</dict>
 </array>
 </plist>

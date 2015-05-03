@@ -602,7 +602,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         //Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
         //Imagen
         NSString *nombreImagen = [datosActividad objectForKey:@"tipoActividad"];
-        nombreImagen = [nombreImagen stringByAppendingString:@".png"];
+        nombreImagen = [nombreImagen stringByAppendingString:@"act.png"];
         UIImageView *thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 50, 50)];;
         thumbnail.image = [UIImage imageNamed:nombreImagen];
         
