@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87021A801AD5D9CB0033D6CE"
-               BuildableName = "App CVC.app"
+               BuildableName = "CVC ITESM.app"
                BlueprintName = "App CVC"
                ReferencedContainer = "container:App CVC.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87021A801AD5D9CB0033D6CE"
-            BuildableName = "App CVC.app"
+            BuildableName = "CVC ITESM.app"
             BlueprintName = "App CVC"
             ReferencedContainer = "container:App CVC.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87021A801AD5D9CB0033D6CE"
-            BuildableName = "App CVC.app"
+            BuildableName = "CVC ITESM.app"
             BlueprintName = "App CVC"
             ReferencedContainer = "container:App CVC.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87021A801AD5D9CB0033D6CE"
-            BuildableName = "App CVC.app"
+            BuildableName = "CVC ITESM.app"
             BlueprintName = "App CVC"
             ReferencedContainer = "container:App CVC.xcodeproj">
          </BuildableReference>

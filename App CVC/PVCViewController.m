@@ -433,7 +433,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     //Tags > 1000 actividades a eliminar
     
     //Identificador del alert para las actividades a agregar
-    if (alertView.tag < 999) {
+    if (alertView.tag < 998) {
         if (buttonIndex == 1) {
             //Semestre al cual guardar
             NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
@@ -528,6 +528,24 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             self.semestreScrollView.contentSize = tamanoActual;
             
             [self recargarPVC];
+        }
+    }
+    
+    //Identificador para navegacion rapida
+    else if (alertView.tag == 998) {
+        if (buttonIndex == 1) {
+            NSInteger semestreMostrar = [[alertView textFieldAtIndex:0].text integerValue];
+            
+            if (semestreMostrar > 0 && semestreMostrar <= semestres) {
+                CGFloat anchoSemestre = self.semestreScrollView.frame.size.width;
+                
+                [self.semestreScrollView setContentOffset:CGPointMake(((semestreMostrar - 1) * anchoSemestre), 0) animated:YES];
+            }
+            else {
+                UIAlertView *errorNav = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Semestre no válido" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Aceptar", nil];
+                
+                [errorNav show];
+            }
         }
     }
     
@@ -795,6 +813,18 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         editarActividadActivado = NO;
     }
+}
+
+- (IBAction) handleDoublePress: (UITapGestureRecognizer *) sender {
+    UIAlertView *alertaCambioSemestre = [[UIAlertView alloc] initWithTitle:@"Ir a Semestre" message:@"Semestre al cual navegar" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"Aceptar", nil];
+    
+    alertaCambioSemestre.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    alertaCambioSemestre.tag = 998;
+    
+    [alertaCambioSemestre textFieldAtIndex:0].keyboardType = UIKeyboardTypeNumberPad;
+    
+    [alertaCambioSemestre show];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

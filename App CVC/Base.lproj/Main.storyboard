@@ -410,16 +410,21 @@ Plan de Vida y Carrera</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNH-4E-zCt">
                                 <rect key="frame" x="0.0" y="478" width="320" height="90"/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.54509803921568623" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="JIp-2e-1YD"/>
                                     <constraint firstAttribute="width" constant="320" id="Rcc-Qu-pxg"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1K-dr-52y">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1K-dr-52y">
                                 <rect key="frame" x="195" y="72" width="30" height="20.5"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.72549019607843135" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qDa-3t-OvK" appends="YES" id="ErQ-eZ-v0p"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH4-6n-yEU">
                                 <rect key="frame" x="16" y="57" width="30" height="48"/>
@@ -523,6 +528,11 @@ Plan de Vida y Carrera</string>
                 <tapGestureRecognizer id="DtV-B2-vYz">
                     <connections>
                         <action selector="handleSinglePress:" destination="1z4-lV-Cjk" id="ePx-qo-FNn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="qDa-3t-OvK">
+                    <connections>
+                        <action selector="handleDoublePress:" destination="1z4-lV-Cjk" id="6Q7-kf-4H0"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
